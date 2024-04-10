@@ -1,1 +1,3 @@
-import style from './Testimonial/Testimonial.module.css'
+.section {
+    padding: var(--app-block-padding);
+}
