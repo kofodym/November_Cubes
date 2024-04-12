@@ -1,9 +1,14 @@
+
+import LandingPage from '../pages/LandingPage';
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      Hello and welcome to a blank page. ALL SET
+      <LandingPage />
+  
+     
     </div>
   );
 }
