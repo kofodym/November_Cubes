@@ -3,9 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--app-secondary-background);
     padding: var(--app-block-padding);
+    /* width: 1440px; */
+    height: 1357px;
 }
 
 .gallery h2 {
@@ -13,13 +15,18 @@
     font-weight: bold;
     font-size: 2rem;
     padding-top: 30px;
-    /* font-family: montserrat; */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+
 }
 
 .gallery-img {
     padding-top: 20px;
     padding-bottom: 50px;
-    margin: 0 auto;
+    margin: 0;
+    width: 100%;
+    
 }
 
 .img-item-container {

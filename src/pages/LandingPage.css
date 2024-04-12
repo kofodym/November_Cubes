@@ -1,3 +1,10 @@
-.landing-page{
- margin: 0 auto;   
-}
+  body {
+      /* width: 100vw; */
+        margin: 0 auto;
+        padding: 0;
+        border-sizing: border-box;
+  }
+
+  .landing-page {
+    
+  }
