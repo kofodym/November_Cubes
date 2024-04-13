@@ -1,0 +1,93 @@
+.download {
+    padding: 0px 0px 0px 40px;
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    color: black;
+    /* width:1347px; */
+    width: 100%;
+}
+
+.download-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    /* width:55%; */
+}
+
+.download-text1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.download-text1 span {
+    color: #C70000;
+    font-size: 56px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.download-text1>h2 {
+    font-size: 60px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.download-text1 p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #4B4B4B;
+}
+
+
+
+.download-logo {
+    width: 100%;
+}
+
+.download-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 54px;
+    width: 75%;
+
+}
+
+.download-logo .google-play-store {
+    width: 182px;
+    border-radius: 6.75px;
+}
+
+.download-logo .apple-store {
+    width: 162px;
+    border-radius: 9.45px;
+}
+
+
+.download-img {
+    /* width: 40%; */
+}
+
+.download-img.phone {
+    width: 700px;
+    height: 891px;
+}
+
+.download-img img {}

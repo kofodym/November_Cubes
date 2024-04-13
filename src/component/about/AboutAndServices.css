@@ -1,0 +1,82 @@
+.about-section,
+.service-section {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 50px auto;
+  font-family: 'montserrat', sans-serif;
+}
+
+.about-text h2,
+.service-text h2 {
+  color: #c70000;
+  margin-top: 80px;
+  font-weight: 600;
+  font-size: 2vw;
+}
+.about-description1,
+.service-description1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.about-description1,
+.about-description2,
+.service-description1,
+.service-description2 {
+  line-height: 30px;
+  word-spacing: 15px;
+}
+.about-image img,
+.service-image img {
+  border-radius: 12px;
+}
+.call-to-action-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 130px;
+  position: relative;
+  font-family: 'montserrat', sans-serif;
+}
+.call-to-action-image {
+  position: absolute;
+  width: 90%;
+  margin: 50px auto;
+}
+.CTA {
+  display: flex;
+  line-height: 30px;
+  word-spacing: 11px;
+}
+
+.tomato {
+  position: absolute;
+  left: 100px;
+  width: 80px;
+  top: -70px;
+}
+.CTA h2 {
+  font-size: 1.5vw;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 500;
+  position: absolute;
+  left: 15%;
+}
+.tomato2 {
+  position: absolute;
+  width: 80px;
+  right: 150px;
+}
+.call-to-action-section button {
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  background-color: #c70000;
+  bottom: -100px;
+  padding: 12px 30px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 200px;
+}

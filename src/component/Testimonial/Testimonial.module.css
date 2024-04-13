@@ -1,0 +1,10 @@
+.testimonial {
+    padding: var(--app-block-padding);
+    width: 1440px;
+    height: 659px;
+    top: 4608px;
+    left: -1px;
+    padding: 90px 98px 84px 98px;
+    gap: 0px;
+    opacity: 0px;
+}
