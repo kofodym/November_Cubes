@@ -33,3 +33,23 @@ a {
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+:root {
+  --app-block-padding: 0px 40px;
+  --app-block-background: black;
+  --app-secondary-background: F7F7F7;
+  --app-primary-color: white;
+}
