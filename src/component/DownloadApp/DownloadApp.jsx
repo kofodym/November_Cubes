@@ -5,7 +5,7 @@ import AppleStore from "../../app/assests/images/ApplePlayStore.png";
 
 const DownloadApp = () => {
   return (
-    <div className={style["download"]}>
+    <div id="download-app" className={style["download"]}>
       <div className={style["download-text"]}>
         <div className={style["download-text1"]}>
           <span>
