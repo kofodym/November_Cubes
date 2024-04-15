@@ -13,11 +13,12 @@
 }
 
 .contact-header h2 {
+    font-size: 2rem;
     padding-bottom: 5px;
 }
 
 .contact-header p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 
@@ -31,8 +32,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    padding: 40px 20px;
+    gap: 60px;
+    padding: 40px 80px 40px 20px;
     height: 450px;
 }
 
@@ -70,7 +71,7 @@
 
 .contact-info-details p {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .contact-info-details div {
@@ -84,7 +85,7 @@
 }
 
 .contact-form-box {
-    width: 50%;
+    width: 45%;
     height: 100%;
 }
 
@@ -95,11 +96,12 @@
 
 .contact-form h3 {
     font-size: 1.2rem;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 .contact-form h4 {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding-bottom: 3px;
 }
 
 .contact-form h4 span {
@@ -111,25 +113,33 @@
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: space-between; */
-    gap: 15px;
+    gap: 30px;
     height: 100%;
 }
 
 input {
-    margin-left: 60px;
+    margin-left: 10px;
 
+}
+form label{
+    display: inline-flex;
 }
 
 input,
 textarea {
     border: 0;
     outline: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 0.5px solid black;
     width:-webkit-fill-available;
 }
 
 textarea {
-    border-bottom: 1px solid #C70000;
+        padding-top:10px;
+    border-bottom: 0.8px solid #C70000;
+}
+
+.message{
+    padding-top: 5px;
 }
 
 .contact-form button {
@@ -139,6 +149,7 @@ textarea {
     color: white;
     width: 35%;
     font-size: 1rem;
+    border: none;
 }
 
 .contact-form button:focus{

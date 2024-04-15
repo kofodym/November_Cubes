@@ -82,18 +82,20 @@ const ContactUs = () => {
                 <h4>Email</h4>
                 <input type="email" name="email" id="email" />
               </label>
-              <label htmlFor="message">
-                <h4>
-                  <span>Message</span>
-                </h4>
-              </label>
-              <textarea
-                name="textarea"
-                placeholder="write here your Message"
-                id="textarea"
-                cols="20"
-                rows="5"
-              ></textarea>
+              <div>
+                <label htmlFor="message" className={style["message"]}>
+                  <h4>
+                    <span>Message</span>
+                  </h4>
+                </label>
+                <textarea
+                  name="textarea"
+                  placeholder="write here your Message"
+                  id="textarea"
+                  cols="20"
+                  rows="5"
+                ></textarea>
+              </div>
               <button type="submit">Send Message</button>
             </form>
           </div>
