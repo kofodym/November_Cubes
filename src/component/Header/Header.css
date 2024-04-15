@@ -27,3 +27,14 @@
 .header-contents p {
   font-size: 0.7vw;
 }
+.sign-up {
+  text-align: center;
+  background-color: #c70000;
+
+  width: 150px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}

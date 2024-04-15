@@ -9,6 +9,7 @@ import AboutAndServices from '../component/about/AboutAndServices';
 import DownloadApp from '../component/DownloadApp/DownloadApp';
 // import Footer from '../component/Footer/Footer';
 import Gallery from '../component/Gallery/Gallery';
+
 // import Testimonial from '../component/Testimonial/Testimonial';
 
 const LandingPage = () => {

@@ -1,8 +1,8 @@
-import './Navbar.css';
 import Logo from '../../assets/Logo.svg';
 import { useState } from 'react';
+import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState('home');
 
   return (
@@ -32,6 +32,11 @@ const Navbar = () => {
           className={menu === 'contact-us' ? 'active' : ''}
         >
           Contact Us
+        </li>
+        <li>
+          <button className="login" onClick={() => setShowLogin(true)}>
+            Login
+          </button>
         </li>
       </ul>
     </div>

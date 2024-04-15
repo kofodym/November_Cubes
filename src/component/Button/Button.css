@@ -1,0 +1,12 @@
+button {
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  background-color: #c70000;
+  bottom: -100px;
+  padding: 12px 30px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 200px;
+}

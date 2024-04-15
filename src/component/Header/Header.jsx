@@ -10,6 +10,7 @@ const Header = () => {
           Explore endless culinary delights and order from your new favorite
           spot
         </p>
+        <button class="sign-up">Sign up</button>
       </div>
     </div>
   );
