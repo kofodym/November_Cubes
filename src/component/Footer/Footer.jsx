@@ -45,7 +45,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className={style["footer2"]}>
-        <p> &Copyright 2024 - November Cubes Copyright. Privacy Policy</p>
+        <p> &copy; 2024 - November Cubes Copyright. Privacy Policy</p>
         <ul className={style["footer-social"]}>
           <li>
             <a href="/#">
