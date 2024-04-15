@@ -1,22 +1,27 @@
-import './LandingPage.css'
-import "./LandingPageMediaQueries.css";
+import './LandingPage.css';
+import './LandingPageMediaQueries.css';
 
-import ContactUs from '../component/ContactUs/ContactUs';
-import DownloadApp from '../component/DownloadApp/DownloadApp';
-import Footer from '../component/Footer/Footer';
+import Header from '../component/Header/Header';
+import AboutAndServices from '../component/about/AboutAndServices';
 import Gallery from '../component/Gallery/Gallery';
+import DownloadApp from '../component/DownloadApp/DownloadApp';
+import ContactUs from '../component/ContactUs/ContactUs';
 import Testimonial from '../component/Testimonial/Testimonial';
+import Footer from '../component/Footer/Footer';
+
 
 const LandingPage = () => {
-    return (
-        <div className='landing-page'>
-            <Gallery />
+  return (
+    <div className="landing-page">
+      <Header />
+      <AboutAndServices />
+      <Gallery />
             <DownloadApp />
            <Testimonial />
             <ContactUs />
             <Footer />
-        </div>
-    )
-}
+    </div>
+  );
+};
 
 export default LandingPage;

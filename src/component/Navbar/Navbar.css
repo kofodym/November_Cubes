@@ -1,0 +1,38 @@
+.navbar {
+  padding: 9px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.login {
+  color: #c70000;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 750px) {
+  .navbar menu {
+    display: none;
+  }
+}
