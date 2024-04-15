@@ -1,10 +1,157 @@
 .contact {
     background-color: #F7F7F7;
-    width: 1439px;
-    height: 847px;
-    top: 5367px;
+    /* height: 847px; */
     padding: 70px 97px 53px 97px;
     gap: 0px;
     opacity: 0px;
+    font-family: "Montserrat", sans-serif;
+}
 
+.contact-header {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+.contact-header p {
+    font-size: 1rem;
+}
+
+
+
+/* .contact-header h3{} */
+
+.contact-box {
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 80px 40px 20px;
+    height: 450px;
+}
+
+.contact-info-box {
+    background-color: #C70000;
+    width: 49%;
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.contact-info-details {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.contact-info-details a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-info-details h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.contact-info-details p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-info-details div {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-info-details #phone .phone-nums {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-box {
+    width: 45%;
+    height: 100%;
+}
+
+.contact-form {
+    padding-top: 30px;
+    height: 100%;
+}
+
+.contact-form h3 {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.contact-form h4 {
+    font-size: 1rem;
+    padding-bottom: 3px;
+}
+
+.contact-form h4 span {
+    color: #C70000;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    gap: 30px;
+    height: 100%;
+}
+
+input {
+    margin-left: 10px;
+
+}
+form label{
+    display: inline-flex;
+}
+
+input,
+textarea {
+    border: 0;
+    outline: 0;
+    border-bottom: 0.5px solid black;
+    width:-webkit-fill-available;
+}
+
+textarea {
+        padding-top:10px;
+    border-bottom: 0.8px solid #C70000;
+}
+
+.message{
+    padding-top: 5px;
+}
+
+.contact-form button {
+    background-color: #C70000;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    width: 35%;
+    font-size: 1rem;
+    border: none;
+}
+
+.contact-form button:focus{
+    font-size: 1.1rem;
 }

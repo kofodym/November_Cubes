@@ -1,16 +1,14 @@
 import './LandingPage.css';
 import './LandingPageMediaQueries.css';
 
-// import ContactUs from '../component/ContactUs/ContactUs';
-
 import Header from '../component/Header/Header';
 import AboutAndServices from '../component/about/AboutAndServices';
-
-import DownloadApp from '../component/DownloadApp/DownloadApp';
-// import Footer from '../component/Footer/Footer';
 import Gallery from '../component/Gallery/Gallery';
+import DownloadApp from '../component/DownloadApp/DownloadApp';
+import ContactUs from '../component/ContactUs/ContactUs';
+import Testimonial from '../component/Testimonial/Testimonial';
+import Footer from '../component/Footer/Footer';
 
-// import Testimonial from '../component/Testimonial/Testimonial';
 
 const LandingPage = () => {
   return (
@@ -18,10 +16,10 @@ const LandingPage = () => {
       <Header />
       <AboutAndServices />
       <Gallery />
-      <DownloadApp />
-      {/* <Testimonial /> */}
-      {/* <ContactUs /> */}
-      {/* <Footer /> */}
+            <DownloadApp />
+           <Testimonial />
+            <ContactUs />
+            <Footer />
     </div>
   );
 };
