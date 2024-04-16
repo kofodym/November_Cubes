@@ -24,8 +24,11 @@ const TestimonialData = () => {
 
   const TestimonialList = list.map((item) => {
     return (
-      <div className={style["contact-info-box"]}>
+      <div className={style["testimonial-box"]}>
         {item.name},{item.profile},{item.message}
+     <div>
+      
+     </div>
       </div>
     );
   });

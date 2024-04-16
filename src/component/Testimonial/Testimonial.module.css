@@ -6,3 +6,14 @@
     opacity: 0px;
     background-color: #FDF4E2;
 }
+.testimonial-box{
+display: flex;
+flex-direction: column;
+
+}
+
+.testimonial-group{
+width: 40%;
+    height: 300px;
+    color: blueviolet;
+}
