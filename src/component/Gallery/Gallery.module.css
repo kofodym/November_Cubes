@@ -15,7 +15,6 @@
     text-align: center;
     font-weight: bold;
     font-size: 2rem;
-    padding-top: 30px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -23,7 +22,7 @@
 }
 
 .gallery-img {
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 50px;
     margin: 0;
     width: 100%;
