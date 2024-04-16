@@ -1,16 +1,22 @@
 import React from 'react';
 import './LoginPopup.css';
 import { useState } from 'react';
-import Cross from '../../assets/close_24px.svg';
+import Cancel from '../../assets/cancel.svg';
+import FoodImg from '../../assets/chicken.svg';
+import Logo from '../../assets/Logo.svg';
 
 const LoginPopup = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState('Login');
   return (
     <div className="login-popup">
+      <div className="left-section">
+        <img className="signup-logo" src={Logo} alt="" />
+        <img src={FoodImg} alt="" />
+      </div>
       <form className="login-popup-container">
         <div className="login-popup-title">
           <h2>{currState}</h2>
-          <img onClick={() => setShowLogin(false)} src={Cross} alt="" />
+          <img onClick={() => setShowLogin(false)} src={Cancel} alt="" />
         </div>
         <div className="login-popup-inputs">
           {currState === 'Login' ? (
