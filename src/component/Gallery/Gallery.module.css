@@ -8,7 +8,8 @@
     /* var(--app-secondary-background); */
     padding: var(--app-block-padding);
     /* width: 1440px; */
-    height: 1357px;
+    /* height: 1357px; */
+    padding: 50px;
 }
 
 .gallery h2 {
