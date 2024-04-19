@@ -1,5 +1,6 @@
 .download {
-    padding: 0px 0px 0px 50px;
+    padding: var(--app-block-padding);
+    padding: 0px 0px 0px 98px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -29,16 +30,14 @@
 
 .download-text1 span {
     color: #C70000;
-    font-size: 56px;
+    font-size: 3.6rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-variation-settings:
-        "slnt" 0;
 }
 
-.download-text1>h2 {
+.download-text1 h2 {
     font-size: 3.6rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
