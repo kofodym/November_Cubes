@@ -20,7 +20,7 @@ const LandingPage = () => {
       <Gallery />
             <DownloadApp />
            <Testimonial />
-            <ContactUs />
+            <ContactUs />git 
             <Footer />
     </div>
   );
