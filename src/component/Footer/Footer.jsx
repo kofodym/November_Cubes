@@ -18,16 +18,16 @@ const Footer = () => {
             <a href="/#">Home</a>
           </li>
           <li>
-            <a href="#about-us">About Us</a>
+            <a href="/#about-services">About Us</a>
           </li>
           <li>
-            <a href="#gallery">Gallery</a>
+            <a href="/#gallery">Gallery</a>
           </li>
           <li>
             <div>
               <ul className={style["footer-contact"]}>
                 <li>
-                  <a href="#contact-us">
+                  <a href="/#footer">
                     <h4>Contact Us</h4>
                   </a>
                 </li>
