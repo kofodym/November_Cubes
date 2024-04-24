@@ -27,16 +27,18 @@ const Footer = () => {
             <div>
               <ul className={style["footer-contact"]}>
                 <li>
-                  <a href="#contact-us">Contact Us</a>
+                  <a href="#contact-us">
+                    <h4>Contact Us</h4>
+                  </a>
                 </li>
                 <li>
                   <a href="tel:+2348156477263">
-                    <p>+2348156477263</p>
+                    <h4>+2348156477263</h4>
                   </a>
                 </li>
                 <li>
                   <a href="tel:+2349036442727">
-                    <p>+2349036442727</p>
+                    <h4>+2349036442727</h4>
                   </a>
                 </li>
               </ul>
