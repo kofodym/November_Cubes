@@ -45,6 +45,7 @@ footer-logo-box {
 .footer-nav li,.footer-social li
  {
     display: inline;
+    width: max-content;
     /* margin-right: 20px; */
 }
 
