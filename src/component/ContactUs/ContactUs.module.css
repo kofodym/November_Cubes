@@ -115,7 +115,7 @@
     height: 100%;
 }
 
-input {
+.contact-form  input {
     margin-left: 10px;
 
 }
@@ -123,7 +123,7 @@ form label{
     display: inline-flex;
 }
 
-input,
+.contact-form input,
 textarea {
     border: 0;
     outline: 0;
@@ -131,12 +131,12 @@ textarea {
     width:-webkit-fill-available;
 }
 
-textarea {
+.contact-form textarea {
         padding-top:10px;
     border-bottom: 0.8px solid #C70000;
 }
 
-.message{
+.contact-form .message{
     padding-top: 5px;
 }
 
