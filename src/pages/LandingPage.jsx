@@ -11,17 +11,16 @@ import Testimonial from '../component/Testimonial/Testimonial';
 // import Testimonials from '../component/Testimonial/Testimonials';
 import Footer from '../component/Footer/Footer';
 
-
 const LandingPage = () => {
   return (
     <div className="landing-page">
       <Header />
       <AboutAndServices />
       <Gallery />
-            <DownloadApp />
-           <Testimonial />
-            <ContactUs />git 
-            <Footer />
+      <DownloadApp />
+      <Testimonial />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

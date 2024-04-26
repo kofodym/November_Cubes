@@ -6,7 +6,7 @@ import TomatoImg from '../../assets/tomato.svg';
 export const AboutAndServices = () => {
   return (
     <div className="about-services">
-      <section className="about-section">
+      <section className="about-section" id="about">
         <div className="about-text">
           <h2>Your one-stop dining destination...</h2>
           <p className="about-description1">
@@ -27,7 +27,7 @@ export const AboutAndServices = () => {
           <img src={AboutImg} alt="AboutUs" />
         </div>
       </section>
-      <section className="service-section">
+      <section className="service-section" id="service">
         <div className="service-image">
           <img src={ServiceImg} alt="AboutUs" />
         </div>
@@ -47,7 +47,7 @@ export const AboutAndServices = () => {
           </p>
         </div>
       </section>
-      <section className="call-to-action-section">
+      <section className="call-to-action-section" id="cta">
         <div className="CTA">
           <img className="tomato" src={TomatoImg} alt="tomato" />
           <h2>
