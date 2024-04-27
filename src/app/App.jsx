@@ -27,13 +27,9 @@ const App = () => {
           {/* <Route path="login" element={<LoginPopup />} /> */}
           {/* <Route path="signup" element={<Signup />} /> */}
           <Route path="menu" element={<Menu />} />
-          {/* <Route path="checkout" element={<Checkout />} /> */}
+          <Route path="checkout" element={<Checkout />} />
         </Routes>
         <Footer />
-
-        <Checkout />
-
-        <LandingPage />
       </div>
     </>
   );

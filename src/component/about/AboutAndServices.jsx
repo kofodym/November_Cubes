@@ -6,7 +6,7 @@ import TomatoImg from '../../assets/tomato.svg';
 export const AboutAndServices = () => {
   return (
     <div className="about-services">
-      <section className="about-section" id="about">
+      <section className="about-section" id="about-services">
         <div className="about-text">
           <h2>Your one-stop dining destination...</h2>
           <p className="about-description1">

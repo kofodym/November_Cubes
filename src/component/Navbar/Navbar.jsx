@@ -13,29 +13,30 @@ const Navbar = ({ setShowLogin }) => {
           onClick={() => setMenu('home')}
           className={menu === 'home' ? 'active' : ''}
         >
-          Home
+          {' '}
+          <a href="/#">Home</a>
         </li>
         <li
           onClick={() => setMenu('about-us')}
           className={menu === 'about-us' ? 'active' : ''}
         >
-          About Us
+          <a href="/#about-services">About Us</a>
         </li>
         <li
           onClick={() => setMenu('gallery')}
           className={menu === 'gallery' ? 'active' : ''}
         >
-          Gallery
+          <a href="/#gallery">Gallery</a>
         </li>
         <li
           onClick={() => setMenu('contact-us')}
           className={menu === 'contact-us' ? 'active' : ''}
         >
-          Contact Us
+          <a href="/#footer">Contact Us</a>
         </li>
         <li>
           <button className="login" onClick={() => setShowLogin(true)}>
-            Login
+            Sign Up
           </button>
         </li>
       </ul>

@@ -1,0 +1,208 @@
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.checkout-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.payment-method {
+  width: 600px;
+}
+.delivery-method-heading,
+.delivery-details-heading {
+  color: #4b4b4b;
+  font-family: montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.delivery-method-form,
+.delivery-details,
+.payment-method-form {
+  border: 1px solid #af7b13;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 1),
+    rgba(252, 242, 219, 1)
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.delivery-label {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: montserrat;
+  color: #1e1e1e;
+}
+.delivery-method,
+.pick-up,
+.delivery-details,
+.bank-transfer,
+.master-card,
+.verve,
+.visa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.door-button,
+.payment-button {
+  width: 15px;
+}
+
+.change-address,
+.bank-group {
+  display: flex;
+}
+.payment-label {
+  margin-left: 10px;
+}
+.payment-method-form {
+  border-radius: 5px;
+  padding: 15px 15px 2px 15px;
+}
+.master-card,
+.bank-transfer {
+  margin-bottom: 30px;
+}
+
+.bank-icon {
+  width: 20px;
+}
+.bank-icon2 {
+  width: 40px;
+}
+.card-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card-details {
+  display: flex;
+  gap: 8px;
+}
+.card-details-item {
+  border-radius: 4px;
+  padding: 8px;
+  border: 0.75px solid #8c8c8c;
+}
+.card-details-item::placeholder {
+  color: #b9b9b9;
+  font-size: 10.46px;
+}
+.card-number,
+.cvv-number {
+  display: flex;
+}
+.card-image,
+.cvv-image {
+  margin-left: -30px;
+}
+.cvv-image {
+  width: 15px;
+}
+.pay-now {
+  background-color: #8d0000;
+  color: white;
+  padding: 6px 10px;
+  width: 50%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+.pay {
+  text-align: center;
+  margin-top: 30px;
+}
+.order {
+  width: 500px;
+  height: 800px;
+  border: 1px solid #af7b13;
+  padding: 20px;
+}
+.order-group {
+  display: flex;
+  border: 1px solid #af7b13;
+  border-radius: 6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+.order-price {
+  color: #af7b13;
+  margin-top: -12px;
+}
+
+.order1 {
+  display: flex;
+  gap: 7px;
+}
+.order-update {
+  display: flex;
+  align-items: center;
+}
+.order-update button {
+  padding: 0px 6px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #af7b13;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+.order-update .order-num {
+  font-size: 16px;
+  margin: 0 10px;
+}
+.order-image {
+  width: 120px;
+  height: 100px;
+}
+.remove {
+  background-color: transparent;
+  border: none;
+  color: #8d0000;
+  outline: none;
+}
+.order-payment,
+.order-payment1 {
+  display: flex;
+  justify-content: space-between;
+}
+.pending-payment {
+  border: 1px solid #af7b13;
+  margin-top: 30px;
+  border-radius: 8px;
+  padding: 5px;
+}
+.payment-status {
+  color: #af7b13;
+  border: 1px solid #af7b13;
+  background-color: transparent;
+  padding: 6px 14px;
+}
+.download {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.download button {
+  color: #c70000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: montserrat;
+  font-weight: 700;
+}
+.order-payment1 {
+  border-top: 1px dotted #af7b13;
+}
