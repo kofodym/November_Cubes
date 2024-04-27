@@ -57,7 +57,7 @@ export const AboutAndServices = () => {
           <img src={TomatoImg} className="tomato2" alt="tomato" />
         </div>
 
-        <button>Download our App</button>
+        <button className="cta-button">Download our App</button>
       </section>
     </div>
   );
