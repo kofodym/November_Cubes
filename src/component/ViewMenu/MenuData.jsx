@@ -1,0 +1,106 @@
+// import "/src/app/assests/images/MenuImages";
+
+import Mojito_Drinks_1 from "../../app/assests/images/MenuImages/Mojito_Drinks_1.png";
+import Peppersoup_Goatmeat_2 from "../../app/assests/images/MenuImages/Peppersoup_Goatmeat_2.png";
+import Berakfast_Combo_Pancake_3 from "../../app/assests/images/MenuImages/Berakfast_Combo_Pancake_3.png";
+import Macaroni_Chicken_4 from "../../app/assests/images/MenuImages/Macaroni_Chicken_4.png";
+import Berakfast_Combo_PapAkara_5 from "../../app/assests/images/MenuImages/Berakfast_Combo_PapAkara_5.png";
+import Champman_6 from "../../app/assests/images/MenuImages/Champman_6.png";
+import Ewa_Agoyin_7 from "../../app/assests/images/MenuImages/Ewa_Agoyin_7.png";
+import Lemonade_Slushie_8 from "../../app/assests/images/MenuImages/Lemonade_Slushie_8.png";
+import Peppersoup_Eforiro_9 from "../../app/assests/images/MenuImages/Peppersoup_Eforiro_9.png";
+// import { BiCategory } from "react-icons/bi";
+// import Cocktail_10 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_11 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_12 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_13 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_14 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_15 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_16 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_17 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+// import Cocktail_18 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
+
+export const Menudata = [
+  {
+    id: 1,
+    name: "Mojito Drinks",
+    sub_title: "Lime Juice",
+    price: 3000,
+    image: "Mojito_Drinks_1.jpg",
+    alt: "Mojito Drinks",
+    Category: "Cocktail",
+  },
+  {
+    id: 2,
+    name: "Peppersoup",
+    sub_title: "Goatmeat",
+    price: 2500,
+    image: "Peppersoup_Goatmeat_2.jpg",
+    alt: "Peppersoup Goatmeat",
+    Category: "Peppersoup",
+  },
+  {
+    id: 3,
+    name: "Berakfast Combo",
+    sub_title: "Pancake",
+    price: 5000,
+    image: "Berakfast_Combo_Pancake_3.jpg",
+    alt: "Berakfast",
+    Category: "Berakfast",
+  },
+  {
+    id: 4,
+    name: "Macaroni",
+    sub_title: "Chicken Sauce",
+    price: 3500,
+    image: "Macaroni_Chicken_4.jpg",
+    alt: "Macaroni Chicken",
+    Category: "Single Meal",
+  },
+  {
+    id: 5,
+    name: "Berakfast Combo",
+    sub_title: "Pap  and Akara",
+    price: 3000,
+    image: "Berakfast_Combo_PapAkara_5.jpg",
+    alt: "Berakfast Combo Pap and Akara",
+    Category: "Berakfast",
+  },
+  {
+    id: 6,
+    name: "Champman",
+    sub_title: "November Cubes Special",
+    price: 4500,
+    image: "Champman_6.jpg",
+    alt: "Champman",
+    Category: "Cocktail",
+  },
+  {
+    id: 7,
+    name: "Ewa Agoyin",
+    sub_title: "Goatmeat",
+    price: 3000,
+    image: "Ewa_Agoyin_7.jpg",
+    alt: "Ewa Agoyin",
+    Category: "Single Meal",
+  },
+  {
+    id: 8,
+    name: "Lemonade Slushie",
+    sub_title: "With Frozen Watermelon",
+    price: 3000,
+    image: "Lemonade_Slushie_8.jpg",
+    alt: "LemonadeSlushie",
+    Category: "Lemonade",
+  },
+
+  {
+    id: 9,
+    name: "Peppersoup_Eforiro_9",
+    sub_title: "with Eforiro",
+    price: 3000,
+    image: "Peppersoup_Eforiro_9.jpg",
+    alt: "Peppersoup Eforiro",
+    Category: "Peppersoup",
+  },
+];
