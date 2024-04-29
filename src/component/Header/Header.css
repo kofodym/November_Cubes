@@ -1,40 +1,72 @@
 .header {
-  height: 40vw;
+  height: 45vw;
   margin: 7px auto;
   background: url('/public/background.svg') no-repeat;
   background-size: cover;
-  position: relative;
   display: flex;
-  font-family: 'montserrat', sans-serif;
-}
-.header-contents {
-  position: absolute;
-  bottom: 35%;
-  left: 30vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  color: white;
-
-  gap: 1.5vw;
-  max-width: 50%;
+  align-items: center;
+  font-family: 'montserrat', sans-serif;
+  position: relative;
 }
+
+.header-contents {
+  text-align: center;
+  color: white;
+  max-width: 80%;
+  padding: 20px;
+}
+
 .header-contents h2 {
   font-weight: 500;
-  font-size: max(3.7vw, 22px);
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  margin-bottom: 10px;
 }
+
 .header-contents p {
-  font-size: 0.7vw;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  margin-bottom: 20px;
 }
-.sign-up {
+
+.menu {
   text-align: center;
   background-color: #c70000;
-
-  width: 150px;
-  height: 40px;
   color: white;
   border: none;
   border-radius: 8px;
-  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1200px) {
+  .header-contents {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 60vh;
+  }
+
+  .header-contents {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 70vh;
+  }
+
+  .header-contents h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .header-contents p {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
 }

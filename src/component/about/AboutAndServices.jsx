@@ -5,12 +5,12 @@ import TomatoImg from '../../assets/tomato.svg';
 
 export const AboutAndServices = () => {
   return (
-    <div className="about-services" id="about-services">
-      <section className="about-section">
+    <div className="about-services">
+      <section className="about-section" id="about-services">
         <div className="about-text">
           <h2>Your one-stop dining destination...</h2>
           <p className="about-description1">
-            Look no further than November Cubes a unique dining destination{" "}
+            Look no further than November Cubes a unique dining destination{' '}
             <br />
             offering the best of both worlds under one roof!
           </p>
@@ -27,7 +27,7 @@ export const AboutAndServices = () => {
           <img src={AboutImg} alt="AboutUs" />
         </div>
       </section>
-      <section className="service-section">
+      <section className="service-section" id="service">
         <div className="service-image">
           <img src={ServiceImg} alt="AboutUs" />
         </div>
@@ -47,7 +47,7 @@ export const AboutAndServices = () => {
           </p>
         </div>
       </section>
-      <section className="call-to-action-section">
+      <section className="call-to-action-section" id="cta">
         <div className="CTA">
           <img className="tomato" src={TomatoImg} alt="tomato" />
           <h2>
@@ -57,7 +57,7 @@ export const AboutAndServices = () => {
           <img src={TomatoImg} className="tomato2" alt="tomato" />
         </div>
 
-        <button>Download our App</button>
+        <button className="cta-button">Download our App</button>
       </section>
     </div>
   );

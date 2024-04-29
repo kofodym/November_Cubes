@@ -2,17 +2,11 @@ import React from 'react';
 import './LoginPopup.css';
 import { useState } from 'react';
 import Cancel from '../../assets/cancel.svg';
-import FoodImg from '../../assets/chicken.svg';
-import Logo from '../../assets/Logo.svg';
 
 const LoginPopup = ({ setShowLogin }) => {
-  const [currState, setCurrState] = useState('Login');
+  const [currState, setCurrState] = useState('Signup');
   return (
     <div className="login-popup">
-      <div className="left-section">
-        <img className="signup-logo" src={Logo} alt="" />
-        <img src={FoodImg} alt="" />
-      </div>
       <form className="login-popup-container">
         <div className="login-popup-title">
           <h2>{currState}</h2>
@@ -28,7 +22,9 @@ const LoginPopup = ({ setShowLogin }) => {
           <input type="email" placeholder="user@gmail.com" required />
           <input type="password" placeholder="password" required />
         </div>
-        <button>{currState === 'Sign Up' ? 'Create account' : 'Login'}</button>
+        <button className="login-popup-btn">
+          {currState === 'Sign Up' ? 'Create account' : 'Login'}
+        </button>
         <div className="login-popup-condition">
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms of use & privacy policy.</p>

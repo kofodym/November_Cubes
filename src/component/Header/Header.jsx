@@ -1,9 +1,9 @@
 import './Header.css';
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="header">
       <div className="header-contents">
         <h2>
           A World of Flavors <br /> at Your Fingertips!
