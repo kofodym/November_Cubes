@@ -1,86 +1,127 @@
 .footer {
-    margin: 0;
-    background-color: #af0101;
-    /* width: 100%; */
-    /* height: 224px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    color: white;
-    padding: 30px 98px 10px 98px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    /* font-family: 'Courier New', Courier, monospace; */
+  margin: 0;
+  background-color: #af0101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: white;
+  padding: 30px 98px 10px 98px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.footer h4{
-    font-size: 1.2rem;
+.footer h4 {
+  font-size: 1.2rem;
 }
 
 .footer1 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 250px;
-    width: 100%;
+  display: flex;
+  align-items: flex-start; /* Center items vertically */
+  justify-content: flex-start; /* Center items horizontally */
+  gap: 200px; /* Reduce the gap between items for better spacing */
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width of the footer content */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .footer1 a {
-    color: white;
-    text-decoration: none;
-    /* margin-right: 20px; */
-}
-
-footer-logo-box {
-    /* margin-right: 20px; */
-}
-
-.footer-nav,
-.footer-contact, .footer-social {
-    list-style-type: none;
-}
-
-.footer-nav li,.footer-social li
- {
-    display: inline;
-    width: max-content;
-    /* margin-right: 20px; */
+  color: white;
+  text-decoration: none;
 }
 
 .footer-nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
 }
 
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* justify-content: space-between; */
-    gap: 10px;
+.footer-logo-box {
+  margin-right: auto; /* Auto margin to push the logo box to the left */
 }
 
-.footer2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-        width: 100%;
-        /* margin: 0 auto; */
-        padding-left: 200px;
-        /* text-align: center; */
-}
-
+.footer-nav,
+.footer-contact,
 .footer-social {
-    /* margin-left: 200px; */
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-nav li,
+.footer-social li {
+  display: inline;
+  margin-right: 20px; /* Add margin between nav/social items */
 }
 
 .footer-social img {
-    width: 30px;
-    height: auto;
-    margin-left: 40px;
+  width: 30px;
+  height: auto;
+  margin-left: 40px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px; /* Reduce the gap between social icons */
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width of the footer content */
+}
+
+.footer2 p {
+  margin-left: 150px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Decrease font size for smaller screens */
+  }
+
+  .footer1 {
+    gap: 20px; /* Reduce the gap between items for smaller screens */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+
+  .footer-nav {
+    gap: 20px; /* Reduce the gap between navigation items */
+  }
+
+  .footer-logo-box {
+    margin-right: 0; /* Remove margin for logo box on smaller screens */
+    margin-bottom: 20px; /* Add margin at the bottom of the logo box */
+  }
+
+  .footer-nav li,
+  .footer-social li {
+    margin-right: 10px; /* Reduce margin between items */
+  }
+
+  .footer2 {
+    gap: 50px; /* Reduce the gap between social icons */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+
+  .footer2 p {
+    margin-left: 0; /* Reset margin for paragraph */
+    text-align: center; /* Center align text */
+  }
 }

@@ -42,7 +42,7 @@ const Testimonials = () => {
                         <h2 className="name">Miracle Peters</h2>
                       </div>
                       <div className="img-text">
-                        <p>
+                        <p id="text">
                           Wow! November Cubes & Mama Ashabi was a delightful
                           surprise. I had the jerk chicken from November Cubes
                           and pounded yam with egusi stew from Mama Ashabi -
@@ -62,7 +62,7 @@ const Testimonials = () => {
                         <h2 className="name">person 2</h2>
                       </div>
                       <div className="img-text">
-                        <p>
+                        <p id="text">
                           An epicurean delight! November Cubes intercontinental
                           offerings are a feast for the senses, showcasing the
                           finest flavors from around the world.
@@ -81,7 +81,7 @@ const Testimonials = () => {
                         <h2 className="name">person 3</h2>
                       </div>
                       <div className="img-text">
-                        <p>
+                        <p id="text">
                           Mama Ashabi s corner is a taste of home! Their
                           authentic Nigerian dishes evoke memories of family
                           gatherings and traditional feasts.",
@@ -104,7 +104,7 @@ const Testimonials = () => {
                         <h2 className="name">person 4</h2>
                       </div>
                       <div className="img-text">
-                        <p>
+                        <p id="text">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Distinctio harum mollitia sit libero soluta.
                           Totam ad veritatis odit molestias laudantium aperiam
@@ -124,7 +124,7 @@ const Testimonials = () => {
                         <h2 className="name">person 5</h2>
                       </div>
                       <div className="img-text">
-                        <p>
+                        <p id="text">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Distinctio harum mollitia sit libero soluta.
                           Totam ad veritatis odit molestias laudantium aperiam
@@ -144,7 +144,7 @@ const Testimonials = () => {
                         <h2 className="name">person 6</h2>
                       </div>
                       <div className="img-text">
-                        <p>
+                        <p id="text">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Distinctio harum mollitia sit libero soluta.
                           Totam ad veritatis odit molestias laudantium aperiam

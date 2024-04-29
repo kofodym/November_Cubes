@@ -59,3 +59,39 @@
 .img-item:hover {
     transform: scale(1.05);
 }
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .gallery {
+        padding: 30px;
+    }
+
+    .gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-img {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .img-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust grid columns for smaller screens */
+    }
+
+    /* Adjust number of items per row for smaller screens */
+    @media screen and (max-width: 480px) {
+        .img-grid {
+            grid-template-columns: repeat(3, minmax(100px, 1fr)); /* 3 items per row */
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .img-grid {
+            grid-template-columns: repeat(2, minmax(100px, 1fr)); /* 2 items per row */
+        }
+    }
+}
+

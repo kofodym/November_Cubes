@@ -1,6 +1,6 @@
 .contact {
     background-color: #F7F7F7;
-    height: 847px;
+    height: auto;
     padding: 70px 97px 53px 97px;
     font-family: "Montserrat", sans-serif;
 }
@@ -153,4 +153,40 @@ textarea {
 
 .contact-form button:focus{
     font-size: 1.1rem;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 50px 10px 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-header h2 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .contact-box {
+        gap: 20px; /* Adjust gap between sections for smaller screens */
+    }
+
+    .contact-info-details h2 {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
+
+    .contact-info-details p {
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
+
+    .contact-form h3 {
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
+
+    .contact-form h4 {
+        font-size: 0.7rem; /* Reduce font size for smaller screens */
+    }
+
+    .contact-form button {
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
 }
