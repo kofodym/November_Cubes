@@ -167,6 +167,16 @@ textarea {
 
     .contact-box {
         gap: 20px; /* Adjust gap between sections for smaller screens */
+        flex-direction: column;
+     
+    }
+
+    .contact-info-box {
+    width: 80%;
+    }
+
+    .contact-form-box{
+        width: 80%;
     }
 
     .contact-info-details h2 {
