@@ -20,27 +20,34 @@ const ProductDisplay = () => {
     <div className="product-list">
       {products.map((product) => (
         <div key={product.id} className="product-item">
-          {/* <IoMdAddCircle
+          <div className="product-item-container">
+            {/* <IoMdAddCircle
             className="add-to-cart1"
              onClick={() => addToCart(product)}
           /> */}
-          <img
-            src={product.image}
-            alt={product.alt}
-            className="product-image"
-          />
-          <div className="product-title d-flex align-items-center justify-content-between">
-            <h3 className="product-name">{product.name}</h3>
-            <MdOutlineFavoriteBorder className="favourite-icon" />
+            <img
+              src={product.image}
+              alt={product.alt}
+              className="product-image"
+            />
+            <div className="product-desc">
+              <div className="product-title d-flex align-items-center justify-content-between">
+                <h3 className="product-name">{product.name}</h3>
+                <MdOutlineFavoriteBorder className="favourite-icon" />
+              </div>
+              <p className="product-subtitle">{product.sub_title}</p>
+              <h3 className="product-price">
+                <span>&#8358;</span>&nbsp;
+                {product.price}
+              </h3>
+              <button
+                className="add-to-cart"
+                onClick={() => addToCart(product)}
+              >
+                +
+              </button>
+            </div>
           </div>
-          <p className="product-subTitle">{product.sub_title}</p>
-          <h3 className="product-price">
-            <span>&#8358;</span>
-            {product.price}
-          </h3>
-          <button className="add-to-cart" onClick={() => addToCart(product)}>
-            +
-          </button>
         </div>
       ))}
     </div>
