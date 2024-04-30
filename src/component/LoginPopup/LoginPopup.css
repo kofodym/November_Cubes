@@ -59,9 +59,9 @@
 .login-popup-condition input {
   margin-top: 5px;
 }
-/*.login-popup-condition p {
-  margin-left: -100px;
-}*/
+.login-popup-condition p {
+  margin-left: -15px;
+}
 .login-popup p span {
   color: #c70000;
   font-weight: 500;

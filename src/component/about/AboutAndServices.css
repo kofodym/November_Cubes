@@ -3,6 +3,7 @@
   display: flex;
   width: 90%;
   justify-content: space-between;
+  gap: 50px;
   margin: 50px auto;
   font-family: 'montserrat', sans-serif;
 }
