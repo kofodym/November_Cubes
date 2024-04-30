@@ -9,10 +9,44 @@
 
 /* ProductDisplay Style */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.product-container {
+  font-family: Montserrat;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6% 15% 4% 15%;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-list ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category-list li {
+  width: 20%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #4b4b4b;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 5%;
 }
 
 .product-item {
@@ -20,37 +54,52 @@
   margin: 20px;
   /* text-align: center; */
   position: relative;
- background-color: #FDF4E2;
+  background-color: #fdf4e2;
+  border-radius: 10px;
 }
 
 .product-item:hover {
-    transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+.product-item-container {
+  padding: 0px 2px;
+}
+
+.product-desc {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-image {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0; /* top-left, top-right, bottom-right, bottom-left */
 }
 
 .product-name {
   margin-top: 10px;
   font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+
+  font-weight: 600;
+  color: #1E1E1E;
 }
 
 .product-subtitle {
-  margin-top: 5px;
-  font-size: 1rem;
-  color: #888;
+  font-size: 0.8rem;
+  color: #4B4B4B;
+  margin-bottom: 0;
+
 }
 
 .product-price {
-  margin-top: 5px;
-  font-size: 1rem;
-  color: #D97706;
+  font-size: 1.4rem;
+  color: #d97706;
 }
-.favourite-icon{
-    font-size: 20px;
-     cursor: pointer;
+.favourite-icon {
+  font-size: 25px;
+  cursor: pointer;
 }
 
 /* .favourite-icon:hover {
@@ -82,12 +131,13 @@
   color: white;
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex; /* Add display flex */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
- font-weight: bold;
+  font-weight: 700;
+  font-size: 22px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

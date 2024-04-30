@@ -2,7 +2,7 @@
 
 import Mojito_Drinks_1 from "../../app/assests/images/MenuImages/Mojito_Drinks_1.png"
 import Peppersoup_Goatmeat_2 from "../../app/assests/images/MenuImages/Peppersoup_Goatmeat_2.png";
-import Berakfast_Combo_Pancake_3 from "../../app/assests/images/MenuImages/Berakfast_Combo_Pancake_3.png";
+import Breakfast_Combo_Pancake_3 from "../../app/assests/images/MenuImages/Berakfast_Combo_Pancake_3.png";
 import Macaroni_Chicken_4 from "../../app/assests/images/MenuImages/Macaroni_Chicken_4.png";
 import Berakfast_Combo_PapAkara_5 from "../../app/assests/images/MenuImages/Berakfast_Combo_PapAkara_5.png";
 import Champman_6 from "../../app/assests/images/MenuImages/Champman_6.png";
@@ -40,12 +40,12 @@ export const MenuData = [
   },
   {
     id: 3,
-    name: "Berakfast Combo",
+    name: "Breakfast Combo",
     sub_title: "Pancake",
     price: 5000,
-    image: Berakfast_Combo_Pancake_3,
-    alt: "Berakfast",
-    Category: "Berakfast",
+    image: Breakfast_Combo_Pancake_3,
+    alt: "Breakfast",
+    Category: "Breakfast",
   },
   {
     id: 4,
@@ -58,12 +58,12 @@ export const MenuData = [
   },
   {
     id: 5,
-    name: "Berakfast Combo",
+    name: "Breakfast Combo",
     sub_title: "Pap  and Akara",
     price: 3000,
     image: Berakfast_Combo_PapAkara_5,
-    alt: "Berakfast Combo Pap and Akara",
-    Category: "Berakfast",
+    alt: "Breakfast Combo Pap and Akara",
+    Category: "Breakfast",
   },
   {
     id: 6,
