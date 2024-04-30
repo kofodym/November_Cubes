@@ -18,6 +18,10 @@ import DownloadIcon from '../assets/Download_Package.svg';
 import SearchBar from '../component/SearchBar/SearchBar.jsx';
 
 const Checkout = () => {
+  const handlePayNow = () => {
+    // Implement payment logic here
+    window.alert('Your order is on the way!');
+  };
   return (
     <div>
       <SearchBar />
@@ -170,7 +174,9 @@ const Checkout = () => {
             <Toggle />
 
             <div className="pay">
-              <button className="pay-now">Pay Now</button>
+              <button className="pay-now" onClick={handlePayNow}>
+                Pay Now
+              </button>
             </div>
           </div>
         </div>

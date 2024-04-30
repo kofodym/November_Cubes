@@ -3,24 +3,27 @@ const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  email: { type: String, required: true, 
-           unique: true,
-           lowercase: true,
-     validate( value ) {
-           if(!validator.isEmail( value )) {
-                throw new Error( 'Email is invalid')
-                 }
-            }
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    validate(value) {
+      if (!validator.isEmail(value)) {
+        throw new Error('Email is invalid');
+      }
+    },
   },
-  password: { type: String, required: true,
-    minLength:7,
+  password: {
+    type: String,
+    required: true,
+    minLength: 7,
     //validation
-            
   },
   //role: { type: String, required: true, default: 'user' },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
 });
 
 //model and export
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model('User', UserSchema);
 module.exports = User;

@@ -1,67 +1,35 @@
-// import Logo from '../../assets/Logo.svg';
-// import { useState } from 'react';
-// import './Navbar.css';
-
-// const Navbar = ({ setShowLogin }) => {
-//   const [menu, setMenu] = useState('home');
-
-//   return (
-//     <div className="navbar">
-//       <img src={Logo} alt="logo" />
-//       <ul className="navbar-menu">
-//         <li
-//           onClick={() => setMenu('home')}
-//           className={menu === 'home' ? 'active' : ''}
-//         >
-//           {' '}
-//           <a href="/#">Home</a>
-//         </li>
-//         <li
-//           onClick={() => setMenu('about-us')}
-//           className={menu === 'about-us' ? 'active' : ''}
-//         >
-//           <a href="/#about-services">About Us</a>
-//         </li>
-//         <li
-//           onClick={() => setMenu('gallery')}
-//           className={menu === 'gallery' ? 'active' : ''}
-//         >
-//           <a href="/#gallery">Gallery</a>
-//         </li>
-//         <li
-//           onClick={() => setMenu('contact-us')}
-//           className={menu === 'contact-us' ? 'active' : ''}
-//         >
-//           <a href="/#footer">Contact Us</a>
-//         </li>
-//         <li>
-//           <button className="login" onClick={() => setShowLogin(true)}>
-//             Sign Up
-//           </button>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
 import Logo from '../../assets/Logo.svg';
 import { useState } from 'react';
 import './Navbar.css';
+import React, { useContext } from 'react';
+import { StoreContext } from '../StoreContext/StoreContext';
+import UserIcon from '../../assets/user-solid.svg';
+import BagIcon from '../../assets/bag-shopping-solid.svg';
+import Logout from '../../assets/arrow-right-from-bracket-solid.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState('home');
-  const [showMenu, setShowMenu] = useState(false); // State to track menu visibility
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu); // Toggle menu visibility
+    setShowMenu(!showMenu);
+  };
+  const { token, setToken } = useContext(StoreContext);
+
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    setToken('');
+    navigate('/');
   };
 
   return (
     <div className="navbar">
       <img src={Logo} alt="logo" className="logo" />
       <div className="menu-icon" onClick={toggleMenu}>
-        ☰ {/* Display the menu icon (hamburger) */}
+        ☰
       </div>
       <ul className={`navbar-menu ${showMenu ? 'show' : ''}`}>
         {/* Navigation Items */}
@@ -101,11 +69,28 @@ const Navbar = ({ setShowLogin }) => {
         >
           <a href="/#footer">Contact Us</a>
         </li>
-        <li>
-          <button className="login" onClick={() => setShowLogin(true)}>
-            Sign Up
-          </button>
-        </li>
+        {!token ? (
+          <li>
+            <button className="login" onClick={() => setShowLogin(true)}>
+              Sign Up
+            </button>
+          </li>
+        ) : (
+          <div className="navbar-profile">
+            <img src={UserIcon} alt="" />
+            <ul className="nav-profile-dropdown">
+              <li>
+                <img src={BagIcon} alt="" />
+                <p>Orders</p>
+              </li>
+              <hr />
+              <li onClick={logout}>
+                <img src={Logout} alt="" />
+                <p>Logout</p>
+              </li>
+            </ul>
+          </div>
+        )}
       </ul>
     </div>
   );
