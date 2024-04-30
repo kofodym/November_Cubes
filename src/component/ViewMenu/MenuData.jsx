@@ -1,6 +1,6 @@
 // import "/src/app/assests/images/MenuImages";
 
-import Mojito_Drinks_1 from "../../app/assests/images/MenuImages/Mojito_Drinks_1.png";
+import Mojito_Drinks_1 from "../../app/assests/images/MenuImages/Mojito_Drinks_1.png"
 import Peppersoup_Goatmeat_2 from "../../app/assests/images/MenuImages/Peppersoup_Goatmeat_2.png";
 import Berakfast_Combo_Pancake_3 from "../../app/assests/images/MenuImages/Berakfast_Combo_Pancake_3.png";
 import Macaroni_Chicken_4 from "../../app/assests/images/MenuImages/Macaroni_Chicken_4.png";
@@ -19,14 +19,13 @@ import Peppersoup_Eforiro_9 from "../../app/assests/images/MenuImages/Peppersoup
 // import Cocktail_16 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
 // import Cocktail_17 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
 // import Cocktail_18 from "../../app/assests/images/MenuImages/1Cocktail_topped_with_orange_slice.png";
-
-export const Menudata = [
+export const MenuData = [
   {
     id: 1,
     name: "Mojito Drinks",
     sub_title: "Lime Juice",
     price: 3000,
-    image: "Mojito_Drinks_1.jpg",
+    image: Mojito_Drinks_1,
     alt: "Mojito Drinks",
     Category: "Cocktail",
   },
@@ -35,7 +34,7 @@ export const Menudata = [
     name: "Peppersoup",
     sub_title: "Goatmeat",
     price: 2500,
-    image: "Peppersoup_Goatmeat_2.jpg",
+    image: Peppersoup_Goatmeat_2,
     alt: "Peppersoup Goatmeat",
     Category: "Peppersoup",
   },
@@ -44,7 +43,7 @@ export const Menudata = [
     name: "Berakfast Combo",
     sub_title: "Pancake",
     price: 5000,
-    image: "Berakfast_Combo_Pancake_3.jpg",
+    image: Berakfast_Combo_Pancake_3,
     alt: "Berakfast",
     Category: "Berakfast",
   },
@@ -53,7 +52,7 @@ export const Menudata = [
     name: "Macaroni",
     sub_title: "Chicken Sauce",
     price: 3500,
-    image: "Macaroni_Chicken_4.jpg",
+    image: Macaroni_Chicken_4,
     alt: "Macaroni Chicken",
     Category: "Single Meal",
   },
@@ -62,7 +61,7 @@ export const Menudata = [
     name: "Berakfast Combo",
     sub_title: "Pap  and Akara",
     price: 3000,
-    image: "Berakfast_Combo_PapAkara_5.jpg",
+    image: Berakfast_Combo_PapAkara_5,
     alt: "Berakfast Combo Pap and Akara",
     Category: "Berakfast",
   },
@@ -71,7 +70,7 @@ export const Menudata = [
     name: "Champman",
     sub_title: "November Cubes Special",
     price: 4500,
-    image: "Champman_6.jpg",
+    image: Champman_6,
     alt: "Champman",
     Category: "Cocktail",
   },
@@ -80,7 +79,7 @@ export const Menudata = [
     name: "Ewa Agoyin",
     sub_title: "Goatmeat",
     price: 3000,
-    image: "Ewa_Agoyin_7.jpg",
+    image: Ewa_Agoyin_7,
     alt: "Ewa Agoyin",
     Category: "Single Meal",
   },
@@ -89,7 +88,7 @@ export const Menudata = [
     name: "Lemonade Slushie",
     sub_title: "With Frozen Watermelon",
     price: 3000,
-    image: "Lemonade_Slushie_8.jpg",
+    image: Lemonade_Slushie_8,
     alt: "LemonadeSlushie",
     Category: "Lemonade",
   },
@@ -99,7 +98,7 @@ export const Menudata = [
     name: "Peppersoup_Eforiro_9",
     sub_title: "with Eforiro",
     price: 3000,
-    image: "Peppersoup_Eforiro_9.jpg",
+    image: Peppersoup_Eforiro_9,
     alt: "Peppersoup Eforiro",
     Category: "Peppersoup",
   },

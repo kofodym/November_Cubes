@@ -1,5 +1,5 @@
 import SearchBar from "../component/SearchBar/SearchBar";
-// import ProductsDisplay from "../component/ViewMenu/ProductsDisplay";
+import ProductsDisplay from "../component/ViewMenu/ProductsDisplay";
 
 // import SideCartEmpty from "../component/ViewMenu/SideCartEmpty";
 // import SideCartFilled from "../component/ViewMenu/SideCartFilled";
@@ -12,13 +12,13 @@ function Menu() {
   
       {/* <NavBar /> */}
       <SearchBar />
-      {/* <div className="products-display">
+      <div className="products-display">
         <ProductsDisplay />
-        <div className="side-cart">
+        {/* <div className="side-cart">
           <SideCartEmpty />
           <SideCartFilled />
-        </div>
-      </div> */}
+        </div> */}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import "./menu.css"; // Import your CSS file for styling
-import {Menudata} from "./MenuData"
- 
+import "../../pages/Menu.css"; // Import your CSS file for styling
+import { MenuData } from "./MenuData"; // Import the menu data
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { IoMdAddCircle } from "react-icons/io";
+
 const ProductDisplay = () => {
-  // Sample product data (replace with your actual data)
+  // product data
   const products = MenuData;
 
   // State to track the items added to the cart
@@ -18,13 +20,24 @@ const ProductDisplay = () => {
     <div className="product-list">
       {products.map((product) => (
         <div key={product.id} className="product-item">
+          {/* <IoMdAddCircle
+            className="add-to-cart1"
+             onClick={() => addToCart(product)}
+          /> */}
           <img
             src={product.image}
-            alt={product.name}
+            alt={product.alt}
             className="product-image"
           />
-          <h3 className="product-name">{product.name}</h3>
-          <p className="product-price">{product.price}</p>
+          <div className="product-title d-flex align-items-center justify-content-between">
+            <h3 className="product-name">{product.name}</h3>
+            <MdOutlineFavoriteBorder className="favourite-icon" />
+          </div>
+          <p className="product-subTitle">{product.sub_title}</p>
+          <h3 className="product-price">
+            <span>&#8358;</span>
+            {product.price}
+          </h3>
           <button className="add-to-cart" onClick={() => addToCart(product)}>
             +
           </button>
