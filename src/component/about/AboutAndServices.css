@@ -3,7 +3,6 @@
   display: flex;
   width: 90%;
   justify-content: space-between;
-  gap: 50px;
   margin: 50px auto;
   font-family: 'montserrat', sans-serif;
 }
@@ -25,7 +24,7 @@
 .service-description1,
 .service-description2 {
   line-height: 30px;
-  word-spacing: 15px;
+  word-spacing: 10px;
 }
 .about-image img,
 .service-image img {

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 // import { Carousel, CarouselCaption } from "react-bootstrap";
-import "../Testimonial/Testimonial.css";
+import '../Testimonial/Testimonial.css';
 
-import profile1 from "../../app/assests/images/peters1.png";
-import profile2 from "../../app/assests/images/uche2.png";
-import profile3 from "../../app/assests/images/idon3.png";
+import profile1 from '../../app/assests/images/peters1.png';
+import profile2 from '../../app/assests/images/uche2.png';
+import profile3 from '../../app/assests/images/idon3.png';
 
 const Testimonials = () => {
   return (
@@ -59,7 +59,7 @@ const Testimonials = () => {
                           <img src={profile2} alt="profile2" />
                         </div>
 
-                        <h2 className="name">person 2</h2>
+                        <h2 className="name">Uche Agu</h2>
                       </div>
                       <div className="img-text">
                         <p id="text">
@@ -78,7 +78,7 @@ const Testimonials = () => {
                           <img src={profile3} alt="profile3" />
                         </div>
 
-                        <h2 className="name">person 3</h2>
+                        <h2 className="name">Idongesit Usoro</h2>
                       </div>
                       <div className="img-text">
                         <p id="text">
@@ -101,7 +101,7 @@ const Testimonials = () => {
                           <img src={profile1} alt="profile1" />
                         </div>
 
-                        <h2 className="name">person 4</h2>
+                        <h2 className="name">Usman Bilikis</h2>
                       </div>
                       <div className="img-text">
                         <p id="text">
@@ -121,7 +121,7 @@ const Testimonials = () => {
                           <img src={profile2} alt="profile5" />
                         </div>
 
-                        <h2 className="name">person 5</h2>
+                        <h2 className="name">Julioet Ibrahim</h2>
                       </div>
                       <div className="img-text">
                         <p id="text">
@@ -141,7 +141,7 @@ const Testimonials = () => {
                           <img src={profile3} alt="profile3" />
                         </div>
 
-                        <h2 className="name">person 6</h2>
+                        <h2 className="name">Hassan Ahmed</h2>
                       </div>
                       <div className="img-text">
                         <p id="text">
