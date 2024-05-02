@@ -1,6 +1,6 @@
 // import "/src/app/assests/images/MenuImages";
 
-import Mojito_Drinks_1 from "../../app/assests/images/MenuImages/Mojito_Drinks_1.png"
+import Mojito_Drinks_1 from "../../app/assests/images/MenuImages/Mojito_Drinks_1.png";
 import Peppersoup_Goatmeat_2 from "../../app/assests/images/MenuImages/Peppersoup_Goatmeat_2.png";
 import Breakfast_Combo_Pancake_3 from "../../app/assests/images/MenuImages/Berakfast_Combo_Pancake_3.png";
 import Macaroni_Chicken_4 from "../../app/assests/images/MenuImages/Macaroni_Chicken_4.png";
@@ -27,7 +27,7 @@ export const MenuData = [
     price: 3000,
     image: Mojito_Drinks_1,
     alt: "Mojito Drinks",
-    Category: "Cocktail",
+    Category: "Drinks",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const MenuData = [
     price: 2500,
     image: Peppersoup_Goatmeat_2,
     alt: "Peppersoup Goatmeat",
-    Category: "Peppersoup",
+    Category: "Food",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const MenuData = [
     price: 5000,
     image: Breakfast_Combo_Pancake_3,
     alt: "Breakfast",
-    Category: "Breakfast",
+    Category: "Food",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const MenuData = [
     price: 3500,
     image: Macaroni_Chicken_4,
     alt: "Macaroni Chicken",
-    Category: "Single Meal",
+    Category: "Food",
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const MenuData = [
     price: 3000,
     image: Berakfast_Combo_PapAkara_5,
     alt: "Breakfast Combo Pap and Akara",
-    Category: "Breakfast",
+    Category: "Food",
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ export const MenuData = [
     price: 4500,
     image: Champman_6,
     alt: "Champman",
-    Category: "Cocktail",
+    Category: "Drinks",
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const MenuData = [
     price: 3000,
     image: Ewa_Agoyin_7,
     alt: "Ewa Agoyin",
-    Category: "Single Meal",
+    Category: "Food",
   },
   {
     id: 8,
@@ -90,7 +90,7 @@ export const MenuData = [
     price: 3000,
     image: Lemonade_Slushie_8,
     alt: "LemonadeSlushie",
-    Category: "Lemonade",
+    Category: "Drinks",
   },
 
   {
@@ -100,6 +100,6 @@ export const MenuData = [
     price: 3000,
     image: Peppersoup_Eforiro_9,
     alt: "Peppersoup Eforiro",
-    Category: "Peppersoup",
+    Category: "Food",
   },
 ];
