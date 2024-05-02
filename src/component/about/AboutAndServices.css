@@ -81,3 +81,71 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 800px) {
+  /* .about-section,
+  .service-section {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    position: relative;
+    font-family: 'montserrat', sans-serif;
+  }
+  .about-image img {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .about-text h2,
+  .service-text h2 {
+    color: #c70000;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 2vw;
+  }
+  .about-description1 {
+    font-size: 16px;
+    position: relative;
+    z-index: 2;.about-text h2,
+  .service-text h2 {
+    color: #c70000;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 2vw;
+  }
+  }
+  .about-description1,
+  .about-description2,
+  .service-description1,
+  .service-description2 {
+    line-height: 30px;
+    word-spacing: 10px;
+  } */
+  .about-section,
+  .service-section {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: center;
+  }
+
+  .about-image {
+    order: 2; /* Change order of image to appear below text on mobile */
+    margin-bottom: 20px; /* Optional: Add space between image and text */
+  }
+
+  .about-text {
+    order: 1; /* Change order of text to appear above image on mobile */
+  }
+  .about-text h2,
+  .service-text h2 {
+    color: #c70000;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 2vw;
+  }
+  .about-description1,
+  .about-description2,
+  .service-description1,
+  .service-description2 {
+    white-space: normal; /* Allow wrapping of text */
+  }
+}

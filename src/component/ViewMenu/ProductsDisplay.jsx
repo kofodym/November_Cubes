@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "../../pages/Menu.css"; // Import your CSS file for styling
-import { MenuData } from "./MenuData"; // Import the menu data
-import { MdOutlineFavoriteBorder } from "react-icons/md";
-import { IoMdAddCircle } from "react-icons/io";
+import React, { useState } from 'react';
+import '../../pages/Menu.css'; // Import your CSS file for styling
+import { MenuData } from './MenuData'; // Import the menu data
+import { MdOutlineFavoriteBorder } from 'react-icons/md';
+//import { IoMdAddCircle } from "react-icons/io";
 
 const ProductDisplay = () => {
   // product data
@@ -12,13 +12,13 @@ const ProductDisplay = () => {
   const [cartItems, setCartItems] = useState([]);
 
   // Function to handle adding a product to the cart
-  const addToCart = (product) => {
+  const addToCart = product => {
     setCartItems([...cartItems, product]);
   };
 
   return (
     <div className="product-list">
-      {products.map((product) => (
+      {products.map(product => (
         <div key={product.id} className="product-item">
           <div className="product-item-container">
             {/* <IoMdAddCircle
