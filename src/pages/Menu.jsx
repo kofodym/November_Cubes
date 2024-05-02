@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 function Menu() {
   // State to track the items added to the cart
   const [cartItems, setCartItems] = useState([]);
-  // State to manage the visibility of the side cart
+  // State to manage the visibility of the side cart component on load
   const [showSideCart, setShowSideCart] = useState(false);
 
   // State to manage the visibility of the popup
@@ -42,10 +42,21 @@ function Menu() {
     // }, 2500);
   };
 
+   const toggleSideCartVisibility = () => {
+     setShowSideCart(!showSideCart);
+   };
+
+   
+// const toggleSideCartVisibility = () => {
+//   console.log("Clicked cart icon");
+//   setSideCartVisible(!sideCartVisible);
+// };
+
+
   return (
     <div className="product">
       {/* SearchBar */}
-      <SearchBar />
+      <SearchBar toggleSideCartVisibility={toggleSideCartVisibility} />
 
       {/* Product container */}
       <div className="product-container">

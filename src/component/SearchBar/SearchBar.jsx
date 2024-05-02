@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 // import { images } from "../../component/Gallery/GalleryImages";
 // import { IconContext } from 'react-icons';
@@ -17,6 +17,9 @@ function SearchBar() {
   // State for search query
   const [searchQuery, setSearchQuery] = useState("");
 
+  // State for side cart visibility
+  // const [sideCartVisible, setSideCartVisible] = useState(false);
+
   // Filter menu items based on search query
   // const filteredMenuItems = menuItems.filter((item) =>
   //   item.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -26,6 +29,7 @@ function SearchBar() {
     event.preventDefault();
     setSearchQuery(event.target.value);
   };
+
   return (
     <div className="container mt-5 mb-5" id="searchbar">
       <div className="row d-flex justify-content-center">
@@ -51,8 +55,10 @@ function SearchBar() {
             <div className="icon-cover position-relative px-1 py-1 rounded-2 bg-#FCF3DF  p-2">
               <FaRegHeart className=" position-absolute top-50 start-50 translate-middle" />
             </div>
-            <div className="icon-cover position-relative px-1 py-1 rounded-2 bg-#FFFFFF  p-2">
-              <BsCart3 className=" position-absolute top-50 start-50 translate-middle" />
+            <div
+              className="icon-cover position-relative px-1 py-1 rounded-2 bg-white p-2"
+            >
+              <BsCart3 className="cart-icon position-absolute top-50 start-50 translate-middle" />
             </div>
           </div>
 
