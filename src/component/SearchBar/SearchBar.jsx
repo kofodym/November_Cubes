@@ -7,7 +7,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 import { TbFilterEdit } from "react-icons/tb";
 
-function SearchBar() {
+function SearchBar({ toggleSideCartVisibility }) {
   // const [value, setValue] = useState("");
   // const [suggestions, setSuggestions] = useState([]);
 
@@ -57,6 +57,7 @@ function SearchBar() {
             </div>
             <div
               className="icon-cover position-relative px-1 py-1 rounded-2 bg-white p-2"
+              onClick={toggleSideCartVisibility}
             >
               <BsCart3 className="cart-icon position-absolute top-50 start-50 translate-middle" />
             </div>
