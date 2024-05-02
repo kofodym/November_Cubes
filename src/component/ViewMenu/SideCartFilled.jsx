@@ -13,11 +13,14 @@ const SideCartFilled = ({ cartItems }) => {
             </div>
             <div className="cart-item-details">
               <h3 className="product-name">{item.name}</h3>
-              <h4 className="product-price">{item.price}</h4>
+
+              <h4 className="product-price">
+                <span>&#8358;</span>&nbsp;{item.price}
+              </h4>
               <div className="cart-item-controls">
-                <button>-</button>
+                <button className="addItem">-</button>
                 <span>1</span>
-                <button>+</button>
+                <button className="removeItem">+</button>
               </div>
             </div>
           </li>

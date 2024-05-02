@@ -40,15 +40,15 @@
   font-size: 1rem;
   font-weight: 500;
   color: #4b4b4b;
-  cursor:pointer
+  cursor: pointer;
 }
 
 /* .category-list li:hover{
 color: #d97706;
 } */
 
-.category-list li:visited{
-color: #d97706;
+.category-list li:visited {
+  color: #d97706;
 }
 
 .product-list {
@@ -90,17 +90,16 @@ color: #d97706;
 .product-name {
   margin-top: 10px;
   font-size: 1rem;
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   font-weight: 600;
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 
 .product-subtitle {
   font-size: 0.8rem;
-  color: #4B4B4B;
+  color: #4b4b4b;
   margin-bottom: 0;
-
 }
 
 .product-price {
@@ -151,37 +150,35 @@ color: #d97706;
   font-size: 22px;
   cursor: pointer;
   /* transition: background-color 0.3s ease; */
-   transition: 0.2s transform ease-in-out;
+  transition: 0.2s transform ease-in-out;
 }
 
-  .add-to-cart:hover {
-    color:white;
-    background-color: #5e0303;
-    border: 2px solid transparent;
-  
-    transform: scale(1.05);
-    /* will-change: transform; */
-  }
+.add-to-cart:hover {
+  color: white;
+  background-color: #5e0303;
+  border: 2px solid transparent;
 
-   .add-to-cart::after {
-    transform: translate(0, 0);
-  }
+  transform: scale(1.05);
+  /* will-change: transform; */
+}
 
-.side-cart-filled ul li{
+.add-to-cart::after {
+  transform: translate(0, 0);
+}
+
+.side-cart-filled ul li {
   list-style: none;
 }
 
-
 /* cart alert pop up  */
 #custom-toast {
- background-color: #12B76A;
+  background-color: #12b76a;
   color: white;
   /* padding: 20px;  */
   border-radius: 8px;
 }
 
-
-.checkout-btn{
+.checkout-btn {
   background-color: #8d0000;
   color: white;
   padding: 6px 10px;
@@ -189,6 +186,7 @@ color: #d97706;
   border-radius: 8px;
   border: none;
   outline: none;
+  font-weight: 600;
 }
 
 .cart-item {
@@ -203,7 +201,6 @@ color: #d97706;
   flex-grow: 1; /* Ensure the details take up remaining space */
 }
 
-
 .cart-item-controls {
   margin-top: 10px;
 }
@@ -213,10 +210,32 @@ color: #d97706;
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #d38020;
   cursor: pointer;
+  /* margin-right: 5px; */
+}
+
+.cart-item-controls button:hover {
+  background-color: #d97706;
+}
+
+.cart-item-controls addItem {
+  margin-left: 10px;
+}
+
+.cart-item-controls span {
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.cart-item-controls removeItem {
+  margin-right: 8px;
 }
 
 .cart-item-controls button:hover {
   background-color: #eaeaea;
+}
+
+.control-button {
+  margin-right: 10px; /* Add margin to create space between buttons and quantity */
 }
