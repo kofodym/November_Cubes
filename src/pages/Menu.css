@@ -190,3 +190,33 @@ color: #d97706;
   border: none;
   outline: none;
 }
+
+.cart-item {
+  margin-bottom: 20px; /* Add margin to create space between each cart item */
+}
+
+.cart-item-image {
+  margin-right: 20px; /* Add margin to create space between image and other contents */
+}
+
+.cart-item-details {
+  flex-grow: 1; /* Ensure the details take up remaining space */
+}
+
+
+.cart-item-controls {
+  margin-top: 10px;
+}
+
+.cart-item-controls button {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.cart-item-controls button:hover {
+  background-color: #eaeaea;
+}
