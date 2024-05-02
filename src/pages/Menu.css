@@ -167,7 +167,7 @@ color: #d97706;
 }
 
 .side-cart-filled {
-  border: 1px solid #d38020;;
+  border: 1px solid #d38020;
   padding: 20px;
 }
 
@@ -202,7 +202,10 @@ color: #d97706;
 }
 
 .cart-item {
-  margin-bottom: 30px; /* Add margin to create space between each cart item */
+  margin-bottom: 50px; /* Add margin to create space between each cart item */
+    border: 1px solid #d38020;
+    border-radius: 20px;
+    padding-right: 30px;
 }
 
 .cart-item-image {
