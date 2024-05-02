@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 // Define the SideCartFilled component
@@ -20,7 +19,9 @@ const SideCartFilled = ({ cartItems }) => {
       </ul>
       {/* Checkout Button */}
       <Link to="/checkout">
-        <button className="checkout-btn">Checkout</button>
+        {cartItems.length > 0 && (
+          <button className="checkout-btn">Checkout</button>
+        )}
       </Link>
     </div>
   );

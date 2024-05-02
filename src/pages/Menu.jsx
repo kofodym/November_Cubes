@@ -5,33 +5,37 @@ import ProductsDisplay from "../component/ViewMenu/ProductsDisplay";
 import SideCartFilled from "../component/ViewMenu/SideCartFilled";
 import "../pages/Menu.css";
 // import CartPopUp from "../component/ViewMenu/CartPopUp";
-import { toast,ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Menu() {
   // State to track the items added to the cart
   const [cartItems, setCartItems] = useState([]);
-  
+  // State to manage the visibility of the side cart
+  const [showSideCart, setShowSideCart] = useState(false);
 
   // State to manage the visibility of the popup
   // const [showPopup, setShowPopup] = useState(false);
 
   // Function to handle adding a product to the cart
   const addToCart = (product) => {
-      console.log("Adding to cart:", product);
-      setCartItems([...cartItems, product]);
-      
-      toast.success("Item added to cart", {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        toastClassName: "custom-toast",
-      });
+    console.log("Adding to cart:", product);
+    setCartItems([...cartItems, product]);
+
+    // Show the side cart
+    setShowSideCart(true);
+
+    toast.success("Item added to cart", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      toastClassName: "custom-toast",
+    });
     // setShowPopup(true); // Show the popup when item is added to cart
     // setTimeout(() => {
     //   setShowPopup(false);
@@ -62,7 +66,10 @@ function Menu() {
           {/* Sidebar Cart */}
           <div className="side-cart">
             {/* <SideCartEmpty /> */}
-            <SideCartFilled cartItems={cartItems} />
+            {/* Display SideCartFilled only if showSideCart is true */}
+            {showSideCart && <SideCartFilled cartItems={cartItems} />}
+
+            {/* <SideCartFilled cartItems={cartItems} /> */}
           </div>
         </div>
       </div>
