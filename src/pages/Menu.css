@@ -171,9 +171,16 @@ color: #d97706;
   padding: 20px;
 }
 
+.side-cart-filled h2{
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 50px 10px 50px 10px;
+}
+
 .side-cart-filled ul li {
   list-style: none;
 }
+
 
 /* cart alert pop up  */
 #custom-toast {
@@ -195,12 +202,20 @@ color: #d97706;
 }
 
 .cart-item {
-  margin-bottom: 20px; /* Add margin to create space between each cart item */
+  margin-bottom: 30px; /* Add margin to create space between each cart item */
 }
 
 .cart-item-image {
   margin-right: 20px; /* Add margin to create space between image and other contents */
+    border-radius: 20px;
 }
+
+
+.cart-item-image img{
+ border-radius: 20px;
+}
+
+
 
 .cart-item-details {
   flex-grow: 1; /* Ensure the details take up remaining space */
