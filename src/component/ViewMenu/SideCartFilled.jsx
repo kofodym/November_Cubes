@@ -17,7 +17,7 @@ const SideCartFilled = ({ cartItems }) => {
               <h4 className="product-price">
                 <span>&#8358;</span>&nbsp;{item.price}
               </h4>
-              <div className="cart-item-controls">
+              <div className="cart-item-controls d-flex align-items-center justify-content-center">
                 <button className="addItem">-</button>
                 <span>1</span>
                 <button className="removeItem">+</button>
