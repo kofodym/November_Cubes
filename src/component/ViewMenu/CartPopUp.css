@@ -1,0 +1,31 @@
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* .popup-container {
+ position: fixed;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background-color: green; 
+  color: white; 
+  padding: 10px 20px;
+  border-radius: 8px;
+} */
+
+.popup {
+  background-color: #12B76A !important;
+ /* Green background color */
+  color: white !important;;
+  padding: 20px !important;; 
+  border-radius: 8px !important;;
+}
