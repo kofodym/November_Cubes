@@ -154,7 +154,6 @@ color: #d97706;
 }
 
 .add-to-cart:hover {
-  color: white;
   background-color: #5e0303;
   border: 2px solid transparent;
 
@@ -166,20 +165,31 @@ color: #d97706;
   transform: translate(0, 0);
 }
 
-.side-cart-filled {
+.side-cart {
+margin-right:30px;
+}
+.side-carts {
   border: 1px solid #d38020;
-  padding: 20px;
+  padding: 50px;
+  height: 100%;
+  width: max-content;
 }
 
-.side-cart-filled h2{
+.side-carts h2{
   font-size: 1.4rem;
   font-weight: 600;
-  padding: 40px 10px 40px 10px;
+  padding: 30px 10px 40px 10px;
 }
 
 .side-cart-filled ul li {
   list-style: none;
 }
+
+
+.side-cart-filled ul {
+   padding-left: 0rem;
+}
+
 
 
 /* cart alert pop up  */
@@ -231,16 +241,14 @@ color: #d97706;
 .cart-item-controls button {
   font-size: 16px;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #969696;
   border-radius: 5px;
-  background-color: #d38020;
+  background-color: #969696;
+  color: white;
   cursor: pointer;
   /* margin-right: 5px; */
 }
 
-.cart-item-controls button:hover {
-  background-color: #d97706;
-}
 
 .cart-item-controls addItem {
   margin-left: 10px;
@@ -259,6 +267,19 @@ color: #d97706;
   background-color: #eaeaea;
 }
 
+.cart-item-controls .deleteItem{
+color: #5e0303;
+}
+
 .control-button {
   margin-right: 10px; /* Add margin to create space between buttons and quantity */
+}
+
+
+.side-cart-empty .emoji{
+margin-bottom: 1.5rem;
+}
+
+.side-cart-empty .empty-text h4{
+font-size: 0.9rem;
 }
