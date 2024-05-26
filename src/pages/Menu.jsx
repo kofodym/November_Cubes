@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import SearchBar from "../component/SearchBar/SearchBar";
 import ProductsDisplay from "../component/ViewMenu/ProductsDisplay";
-// import SideCartEmpty from "../component/ViewMenu/SideCartEmpty";
-import SideCartFilled from "../component/ViewMenu/SideCartFilled";
+
+import Cart from "../component/ViewMenu/Cart";
 import "../pages/Menu.css";
 // import CartPopUp from "../component/ViewMenu/CartPopUp";
 import { toast, ToastContainer } from "react-toastify";
@@ -75,12 +75,14 @@ function Menu() {
           <ProductsDisplay addToCart={addToCart} />
 
           {/* Sidebar Cart */}
-          <div className="side-cart">
+          <div className="side-cart d-flex flex-md-column align-items-center justify-content-evenly">
             {/* <SideCartEmpty /> */}
-            {/* Display SideCartFilled only if showSideCart is true */}
-            {showSideCart && <SideCartFilled cartItems={cartItems} />}
+            {/* Display Cart only if showSideCart is true */}
+            {showSideCart && (
+              <Cart cartItems={cartItems} />
+            )}
 
-            {/* <SideCartFilled cartItems={cartItems} /> */}
+            {/* <Cart cartItems={cartItems} /> */}
           </div>
         </div>
       </div>
