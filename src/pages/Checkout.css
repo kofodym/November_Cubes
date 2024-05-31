@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+  gap: 20px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
@@ -10,9 +11,6 @@
   margin-bottom: 25px;
 }
 
-.payment-method {
-  width: 600px;
-}
 .delivery-method-heading,
 .delivery-details-heading {
   color: #4b4b4b;
@@ -123,10 +121,9 @@
   margin-top: 30px;
 }
 .order {
-  width: 500px;
-  height: 800px;
   border: 1px solid #af7b13;
   padding: 20px;
+  height: 800px;
 }
 .order-group {
   display: flex;
@@ -205,4 +202,18 @@
 }
 .order-payment1 {
   border-top: 1px dotted #af7b13;
+}
+
+@media (max-width: 800px) {
+  .checkout-container {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  .order {
+    margin-top: 50px;
+  }
 }
