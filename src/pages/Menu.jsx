@@ -1,28 +1,32 @@
 import React, { useState } from 'react';
 import SearchBar from '../component/SearchBar/SearchBar';
-import ProductsDisplay from '../component/ViewMenu/ProductsDisplay';
-
+import ProductDisplay from '../component/ViewMenu/ProductsDisplay';
+import ProductDetails from '../component/ViewMenu/ProductDetails';
 import Cart from '../component/ViewMenu/Cart';
+// import Categories from "../component/ViewMenu/Categories"
 import '../pages/Menu.css';
-// import CartPopUp from "../component/ViewMenu/CartPopUp";
-//import { toast, ToastContainer } from 'react-toastify';
-//import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Routes, Route } from 'react-router-dom';
 
 function Menu() {
-  // State to track the items added to the cart
   const [cartItems, setCartItems] = useState([]);
-  // State to manage the visibility of the side cart component on load
   const [showSideCart, setShowSideCart] = useState(false);
 
-  // State to manage the visibility of the popup
-  // const [showPopup, setShowPopup] = useState(false);
-
-  // Function to handle adding a product to the cart
   const addToCart = product => {
-    console.log('Adding to cart:', product);
-    setCartItems([...cartItems, product]);
+    const existingProduct = cartItems.find(item => item.id === product.id);
+    if (existingProduct) {
+      setCartItems(
+        cartItems.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    }
 
-    // Show the side cart
     setShowSideCart(true);
 
     toast.success('Item added to cart', {
@@ -36,54 +40,36 @@ function Menu() {
       theme: 'light',
       toastClassName: 'custom-toast',
     });
-    // setShowPopup(true); // Show the popup when item is added to cart
-    // setTimeout(() => {
-    //   setShowPopup(false);
-    // }, 2500);
   };
 
   const toggleSideCartVisibility = () => {
     setShowSideCart(!showSideCart);
   };
 
-  // const toggleSideCartVisibility = () => {
-  //   console.log("Clicked cart icon");
-  //   setSideCartVisible(!sideCartVisible);
-  // };
-
   return (
     <div className="product">
-      {/* SearchBar */}
       <SearchBar toggleSideCartVisibility={toggleSideCartVisibility} />
-
-      {/* Product container */}
       <div className="product-container">
-        {/* Category List */}
-        <div className="category-list">
-          <ul>
-            <li>All</li>
-            <li>Food</li>
-            <li>Drinks</li>
-            <li>Pastries</li>
-          </ul>
-        </div>
-
-        {/* Product List */}
+        {/* <Categories /> */}
         <div className="d-flex">
-          <ProductsDisplay addToCart={addToCart} />
+          <Routes>
+            <Route
+              path="/"
+              element={<ProductDisplay addToCart={addToCart} />}
+            />
+            <Route
+              path="/product/:productId"
+              element={<ProductDetails addToCart={addToCart} />}
+            />
+          </Routes>
 
-          {/* Sidebar Cart */}
           <div className="side-cart d-flex flex-md-column align-items-center justify-content-evenly">
-            {/* <SideCartEmpty /> */}
-            {/* Display Cart only if showSideCart is true */}
-            {showSideCart && <Cart cartItems={cartItems} />}
-
-            {/* <Cart cartItems={cartItems} /> */}
+            {showSideCart && (
+              <Cart cartItems={cartItems} setCartItems={setCartItems} />
+            )}
           </div>
         </div>
       </div>
-      {/* CartPopUp */}
-      {/* <CartPopUp showPopup={showPopup} setShowPopup={setShowPopup} /> */}
       <ToastContainer toastClassName="custom-toast" />
     </div>
   );

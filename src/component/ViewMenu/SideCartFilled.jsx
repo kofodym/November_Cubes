@@ -1,83 +1,61 @@
-import React,{useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../pages/Menu.css";
 
-const SideCartFilled = ({ cartItems, setCartItems }) => {
-  // State variable to track the quantity of each item
-  const [itemQuantities, setItemQuantities] = useState(
-    cartItems.map(() => 1) // Initialize all quantities to 1
-  );
-
-  // Increment Function to handle adding an item
-  const addItem = (index) => {
-    const newQuantities = [...itemQuantities];
-    newQuantities[index] += 1;
-    setItemQuantities(newQuantities);
-
-    // Update the total price of the item
-    const updatedCartItems = cartItems.map((item, idx) => {
-      if (idx === index) {
-        return {
-          ...item,
-          totalPrice: item.price * newQuantities[idx],
-        };
-      }
-      return item;
-    });
-    // end price update
-
-    setCartItems(updatedCartItems);
-  };
-
-  // };
-
-  // Function to handle removing an item
-  const removeItem = (index) => {
-    if (itemQuantities[index] > 1) {
-      const newQuantities = [...itemQuantities];
-      newQuantities[index] -= 1;
-      setItemQuantities(newQuantities);
-    }
-  };
-
-  const deleteItem = (index) => {
-    const newCartItems = [...cartItems];
-    newCartItems.splice(index, 1);
-    setItemQuantities(itemQuantities.filter((_, idx) => idx !== index));
-  };
-
+const SideCartFilled = ({
+  cartItems,
+  handleIncrement,
+  handleDecrement,
+  removeFromCart,
+  totalPrice,
+}) => {
   return (
-    <div>
-      <ul>
-        {cartItems.map((item, index) => (
-          <li key={index} className="cart-item d-flex g-1">
-            <div className="cart-item-image">
-              <img src={item.image} alt={item.alt} />
-            </div>
-            <div className="cart-item-details">
+    <div className="cart-items">
+      {cartItems.map((item) => (
+        <div key={item.id} className="cart-item d-flex g-1">
+          <div className="cart-item-image">
+            <img src={item.image} alt={item.alt} className="cart-item-images" />
+          </div>
+          <div className="cart-item-details">
+            <div>
               <h3 className="product-name">{item.name}</h3>
-
+              {/* <br /> */}
               <h4 className="product-price">
                 <span>&#8358;</span>&nbsp;{item.price}
               </h4>
-              <div className="cart-item-controls d-flex align-items-center justify-content-center">
-                <button className="addItem" onClick={() => removeItem(index)}>
+            </div>
+
+            <div className="cart-item-controls">
+              <div className="d-flex">
+                <button
+                  type="button"
+                  className="addItem"
+                  onClick={() => handleDecrement(item)}
+                >
                   -
                 </button>
-                <span>{itemQuantities[index]}</span>
-                <button className="removeItem" onClick={() => addItem(index)}>
+                <span className="item-quantity">{item.quantity}</span>
+                <button
+                  type="button"
+                  className="removeItem"
+                  onClick={() => handleIncrement(item)}
+                >
                   +
                 </button>
-
-                <span className="deleteItem" onClick={() => deleteItem(index)}>
-                  Remove
-                </span>
               </div>
+              <span className="deleteItem" onClick={() => removeFromCart(item)}>
+                Remove
+              </span>
             </div>
-          </li>
-        ))}
-      </ul>
-      {/* Checkout Button */}
+          </div>
+        </div>
+      ))}
+      <div>
+        <h4>Total</h4>
+        {totalPrice}
+      </div>
+
+      {/* link that redirects to checkout page */}
       <Link to="/checkout">
         {cartItems.length > 0 && (
           <button className="checkout-btn">Checkout</button>

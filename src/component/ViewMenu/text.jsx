@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import '../../pages/Menu.css'; // Import your CSS file for styling
-import { MenuData } from './MenuData'; // Import the menu data
-import { MdOutlineFavoriteBorder } from 'react-icons/md';
-import ProductDetails from './ProductDetails';
-import Categories from '../../component/ViewMenu/Categories';
+import React, { useState } from "react";
+import "../../pages/Menu.css"; // Import your CSS file for styling
+import { MenuData } from "./MenuData"; // Import the menu data
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import ProductDetails from "./ProductDetails";
+import Categories from "../../component/ViewMenu/Categories";
 
 const ProductDisplay = ({ addToCart }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = MenuData;
 
-  const handleViewMore = product => {
+  const handleViewMore = (product) => {
     setSelectedProduct(product);
   };
 
@@ -31,7 +31,7 @@ const ProductDisplay = ({ addToCart }) => {
       </div>
 
       <div className="product-list">
-        {products.map(product => (
+        {products.map((product) => (
           <div
             key={product.id}
             className="product-item d-flex flex-column gap-3"
@@ -47,11 +47,9 @@ const ProductDisplay = ({ addToCart }) => {
                   className="favourite-icon-wrapper"
                   onClick={handleFavouriteClick}
                 >
-                  {/* <MdOutlineFavoriteBorder className="favourite-icon" /> */}
-
                   <MdOutlineFavoriteBorder
                     className={`favourite-icon ${
-                      isFavourite ? 'favourite-icon-filled' : ''
+                      isFavourite ? "favourite-icon-filled" : ""
                     }`}
                     onClick={handleFavouriteClick}
                   />
@@ -62,12 +60,13 @@ const ProductDisplay = ({ addToCart }) => {
                 <h3 className="product-price">
                   <span>&#8358;</span>&nbsp;{product.price}
                 </h3>
-                <span
-                  className="view-more-link"
+                <button
+                  className="view-more"
+                  type="button"
                   onClick={() => handleViewMore(product)}
                 >
-                  view more
-                </span>
+                  View More
+                </button>
               </div>
 
               <button
@@ -83,17 +82,19 @@ const ProductDisplay = ({ addToCart }) => {
 
         {selectedProduct && (
           <div className="popup-overlay" onClick={closePopup}>
-            <div className="popup-content" onClick={e => e.stopPropagation()}>
-              <ProductDetails product={selectedProduct} addToCart={addToCart} />
+            <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+              <ProductDetails
+                product={selectedProduct}
+                addToCart={addToCart}
+                closeModal={closePopup}
+              />
             </div>
           </div>
         )}
 
-        <>
-          {/* <button type="button" className="product-more d-flex align-items-center justify-content-center">
-            See more
-          </button> */}
-        </>
+        <button className="d-flex align-items-center justify-content-center">
+          See more
+        </button>
       </div>
     </section>
   );
