@@ -1,229 +1,91 @@
-//UPDATED ONE
-// import React, { useState, useContext } from 'react';
-// import './LoginPopup.css';
-// import { StoreContext } from '../StoreContext/StoreContext';
-// import Cancel from '../../assets/cancel.svg';
-// import axios from 'axios';
-
-// const LoginPopup = ({ setShowLogin }) => {
-//   const { url, setToken } = useContext(StoreContext);
-//   const [currState, setCurrState] = useState('Login');
-
-//   const [data, setData] = useState({
-//     name: '',
-//     email: '',
-//     password: '',
-//   });
-
-//   const onChangeHandler = event => {
-//     const { name, value } = event.target;
-//     setData(prevData => ({ ...prevData, [name]: value }));
-//   };
-
-//   const onLogin = async event => {
-//     event.preventDefault();
-//     let newUrl = url;
-//     if (currState === 'Login') {
-//       newUrl += '/api/user/login';
-//     } else {
-//       newUrl += '/api/user/register';
-//     }
-
-//     try {
-//       const response = await axios.post(newUrl, data);
-//       if (response.data.success) {
-//         setToken(response.data.token);
-//         localStorage.setItem('token', response.data.token);
-//         setShowLogin(false);
-//       } else {
-//         alert(response.data.message);
-//       }
-//     } catch (error) {
-//       if (error.response) {
-//         // The request was made and the server responded with a status code
-//         console.error(
-//           'Server responded with error:',
-//           error.response.status,
-//           error.response.data
-//         );
-//         alert('Server responded with error. Please try again.');
-//       } else if (error.request) {
-//         // The request was made but no response was received
-//         console.error('No response received from server:', error.request);
-//         alert(
-//           'No response received from server. Please check your internet connection.'
-//         );
-//       } else {
-//         // Something else happened in making the request
-//         console.error('Error occurred during request setup:', error.message);
-//         alert('An error occurred. Please try again.');
-//       }
-//     }
-//   };
-
-//   return (
-//     <div className="login-popup">
-//       <form onSubmit={onLogin} className="login-popup-container">
-//         <div className="login-popup-title">
-//           <h2>{currState}</h2>
-//           <img onClick={() => setShowLogin(false)} src={Cancel} alt="" />
-//         </div>
-//         <div className="login-popup-inputs">
-//           {currState !== 'Login' && (
-//             <input
-//               name="name"
-//               onChange={onChangeHandler}
-//               value={data.name}
-//               type="text"
-//               placeholder="Your name"
-//               required
-//             />
-//           )}
-
-//           <input
-//             name="email"
-//             onChange={onChangeHandler}
-//             value={data.email}
-//             type="email"
-//             placeholder="user@gmail.com"
-//             required
-//           />
-//           <input
-//             name="password"
-//             onChange={onChangeHandler}
-//             value={data.password}
-//             type="password"
-//             placeholder="password"
-//             required
-//           />
-//         </div>
-//         <button type="submit" className="login-popup-btn">
-//           {currState === 'Sign Up' ? 'Create account' : 'Login'}
-//         </button>
-//         <div className="login-popup-condition">
-//           <input type="checkbox" required />
-//           <p>By continuing, I agree to the terms of use & privacy policy.</p>
-//         </div>
-
-//         {currState === 'Login' ? (
-//           <p>
-//             Create a new account?{' '}
-//             <span onClick={() => setCurrState('Sign Up')}>Click here</span>
-//           </p>
-//         ) : (
-//           <p>
-//             Already have an account?
-//             <span onClick={() => setCurrState('Login')}>Login here</span>
-//           </p>
-//         )}
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default LoginPopup;
 import React from "react";
-import "./LoginPopup.css";
-import { useState } from "react";
-import Cancel from "../../assets/cancel.svg";
+// import { useParams } from "react-router-dom";
+// import { MenuData } from "./MenuData";
+import "../../pages/Menu.css";
 
-const LoginPopup = ({ setShowLogin }) => {
-  const [currState, setCurrState] = useState("Signup");
+const ProductDetails = ({ product, addToCart, closeModal }) => {
+  if (!product) return null;
+
   return (
-    <div className="login-popup">
-      <form className="login-popup-container">
-        <div className="login-popup-title">
-          <h2>{currState}</h2>
-          <img onClick={() => setShowLogin(false)} src={Cancel} alt="" />
-        </div>
-        <div className="login-popup-inputs">
-          {currState === "Login" ? (
-            <></>
-          ) : (
-            <input type="text" placeholder="Your name" required />
-          )}
-
-          <input type="email" placeholder="user@gmail.com" required />
-          <input type="password" placeholder="password" required />
-        </div>
-        <button className="login-popup-btn">
-          {currState === "Sign Up" ? "Create account" : "Login"}
+    <div className="product-details-modal">
+      <div className="product-details-content">
+        <button type="button" className="close-button" onClick={closeModal}>
+          &times;
         </button>
-        <div className="login-popup-condition">
-          <input type="checkbox" required />
-          <p>By continuing, I agree to the terms of use & privacy policy.</p>
+        <div className="product-details">
+          <div className="product-details-image">
+            <img
+              src={product.image}
+              alt={product.alt}
+              className="product-image"
+            />
+          </div>
+          <div className="product-details-desc">
+            <div className="product-title d-flex flex-column">
+              <h3 className="product-name">{product.name}</h3>
+              <h3 className="product-price">
+                <span>&#8358;</span>&nbsp;{product.price}
+              </h3>
+            </div>
+            <p className="product-description">{product.description}</p>
+            <div className="product-details-categories">
+              <h3 className="product-details-category">
+                <span>Category:</span>
+                {product.category}
+              </h3>
+              <h3 className="product-details-id">
+                <span>Menu ID:</span>
+                {product.id}
+              </h3>
+            </div>
+            <button className="add-to-cart2" onClick={() => addToCart(product)}>
+              Add to Cart
+            </button>
+          </div>
         </div>
-
-        {currState === "Login" ? (
-          <p>
-            Create a new account?{" "}
-            <span onClick={() => setCurrState("Sign Up")}>Click here</span>
-          </p>
-        ) : (
-          <p>
-            Already have an account?
-            <span onClick={() => setCurrState("Login")}>Login here</span>
-          </p>
-        )}
-      </form>
+      </div>
+      <div className="modal-overlay" onClick={closeModal}></div>
     </div>
   );
 };
 
-export default LoginPopup;
-// import React, { useState } from 'react';
-// import './LoginPopup.css';
-// import Cancel from '../../assets/cancel.svg';
+export default ProductDetails;
 
-// const LoginPopup = ({ setShowLogin }) => {
-//   const [currState, setCurrState] = useState('Signup');
-//   const [isRegistered, setIsRegistered] = useState(false);
+// const ProductDetails = ({ addToCart }) => {
+//   const { productId } = useParams();
+//   const product = MenuData.find((item) => item.id === parseInt(productId));
 
-//   const handleSignup = e => {
-//     e.preventDefault();
-//     // Perform signup logic (e.g., API call)
-//     // Assuming successful registration, show browser alert
-//     setIsRegistered(true);
-//     window.alert('You have successfully registered!');
-//   };
+//   if (!product) {
+//     return <div>Product not found</div>;
+//   }
 
 //   return (
-//     <div className="login-popup">
-//       <form onSubmit={handleSignup} className="login-popup-container">
-//         <div className="login-popup-title">
-//           <h2>{currState}</h2>
-//           <img onClick={() => setShowLogin(false)} src={Cancel} alt="" />
+//     <div className="product-item-container">
+//       <div className="product-item-image">
+//         <img src={product.image} alt={product.alt} className="product-image" />
+//       </div>
+//       <div className="product-details-desc">
+//         <div className="product-title d-flex align-items-center justify-content-between">
+//           <h3 className="product-name">{product.name}</h3>
+//           <h3 className="product-price">
+//             <span>&#8358;</span>&nbsp;{product.price}
+//           </h3>
 //         </div>
-//         <div className="login-popup-inputs">
-//           {currState !== 'Login' && (
-//             <input type="text" placeholder="Your name" required />
-//           )}
-
-//           <input type="email" placeholder="user@gmail.com" required />
-//           <input type="password" placeholder="password" required />
+//         <p className="product-description">{product.description}</p>
+//         <div className="product-details-categories">
+//           <h3 className="product-details-category">
+//             <span>{product.category}</span>
+//           </h3>
+//           <h3 className="product-details-id">
+//             <span>{product.id}</span>
+//           </h3>
 //         </div>
-//         <button className="login-popup-btn">
-//           {currState === 'Sign Up' ? 'Create account' : 'Login'}
+//         <button className="add-to-cart" onClick={() => addToCart(product)}>
+//           Add to Cart
 //         </button>
-//         <div className="login-popup-condition">
-//           <input type="checkbox" required />
-//           <p>By continuing, I agree to the terms of use & privacy policy.</p>
-//         </div>
-
-//         {currState === 'Login' ? (
-//           <p>
-//             Create a new account?{' '}
-//             <span onClick={() => setCurrState('Sign Up')}>Click here</span>
-//           </p>
-//         ) : (
-//           <p>
-//             Already have an account?
-//             <span onClick={() => setCurrState('Login')}>Login here</span>
-//           </p>
-//         )}
-//       </form>
+//       </div>
 //     </div>
 //   );
 // };
 
-// export default LoginPopup;
+// export default ProductDetails;

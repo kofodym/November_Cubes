@@ -28,6 +28,8 @@ export const MenuData = [
     image: Mojito_Drinks_1,
     alt: "Mojito Drinks",
     Category: "Drinks",
+    description:
+      "Mojito Drinks Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 2,
@@ -37,6 +39,8 @@ export const MenuData = [
     image: Peppersoup_Goatmeat_2,
     alt: "Peppersoup Goatmeat",
     Category: "Food",
+    description:
+      "Peppersoup Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 3,
@@ -45,7 +49,9 @@ export const MenuData = [
     price: 5000,
     image: Breakfast_Combo_Pancake_3,
     alt: "Breakfast",
-    Category: "Food",
+    category: "Food",
+    description:
+      "Breakfast Combo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 4,
@@ -55,6 +61,8 @@ export const MenuData = [
     image: Macaroni_Chicken_4,
     alt: "Macaroni Chicken",
     Category: "Food",
+    description:
+      "Macaroni Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 5,
@@ -64,6 +72,8 @@ export const MenuData = [
     image: Berakfast_Combo_PapAkara_5,
     alt: "Breakfast Combo Pap and Akara",
     Category: "Food",
+    description:
+      "Breakfast Combo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 6,
@@ -73,6 +83,8 @@ export const MenuData = [
     image: Champman_6,
     alt: "Champman",
     Category: "Drinks",
+    description:
+      "Champman Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 7,
@@ -82,6 +94,8 @@ export const MenuData = [
     image: Ewa_Agoyin_7,
     alt: "Ewa Agoyin",
     Category: "Food",
+    description:
+      "Ewa Agoyin Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
   {
     id: 8,
@@ -91,15 +105,19 @@ export const MenuData = [
     image: Lemonade_Slushie_8,
     alt: "LemonadeSlushie",
     Category: "Drinks",
+    description:
+      "Lemonade Slushie Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
 
   {
     id: 9,
-    name: "Peppersoup_Eforiro_9",
+    name: "Peppersoup_Eforiro",
     sub_title: "with Eforiro",
     price: 3000,
     image: Peppersoup_Eforiro_9,
     alt: "Peppersoup Eforiro",
     Category: "Food",
+    description:
+      "Peppersoup_Eforiro Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
 ];

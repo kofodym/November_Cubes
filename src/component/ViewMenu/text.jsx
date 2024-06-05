@@ -47,8 +47,6 @@ const ProductDisplay = ({ addToCart }) => {
                   className="favourite-icon-wrapper"
                   onClick={handleFavouriteClick}
                 >
-                  {/* <MdOutlineFavoriteBorder className="favourite-icon" /> */}
-
                   <MdOutlineFavoriteBorder
                     className={`favourite-icon ${
                       isFavourite ? "favourite-icon-filled" : ""
@@ -62,12 +60,13 @@ const ProductDisplay = ({ addToCart }) => {
                 <h3 className="product-price">
                   <span>&#8358;</span>&nbsp;{product.price}
                 </h3>
-                <span
-                  className="view-more-link"
+                <button
+                  className="view-more"
+                  type="button"
                   onClick={() => handleViewMore(product)}
                 >
-                  view more
-                </span>
+                  View More
+                </button>
               </div>
 
               <button
@@ -84,16 +83,18 @@ const ProductDisplay = ({ addToCart }) => {
         {selectedProduct && (
           <div className="popup-overlay" onClick={closePopup}>
             <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-              <ProductDetails product={selectedProduct} addToCart={addToCart} />
+              <ProductDetails
+                product={selectedProduct}
+                addToCart={addToCart}
+                closeModal={closePopup}
+              />
             </div>
           </div>
         )}
 
-        <>
-          <button type="button" className="product-more d-flex align-items-center justify-content-center">
-            See more
-          </button>
-        </>
+        <button className="d-flex align-items-center justify-content-center">
+          See more
+        </button>
       </div>
     </section>
   );
