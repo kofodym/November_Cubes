@@ -90,9 +90,9 @@ const ProductDisplay = ({ addToCart }) => {
         )}
 
         <>
-          <button type="button" className="product-more d-flex align-items-center justify-content-center">
+          {/* <button type="button" className="product-more d-flex align-items-center justify-content-center">
             See more
-          </button>
+          </button> */}
         </>
       </div>
     </section>
