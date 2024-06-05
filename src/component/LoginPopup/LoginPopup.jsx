@@ -204,6 +204,7 @@ const LoginPopup = ({ setShowLogin, onLoginSuccess }) => {
         </div>
         <div className="login-popup-inputs">
           {currState === 'Sign Up' && (
+            
             <input
               type="text"
               placeholder="Your name"
