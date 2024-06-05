@@ -1,5 +1,5 @@
 .navbar {
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,9 +13,13 @@
 
 .navbar-menu {
   display: flex;
-  list-style: none;
+  align-items: center;
+  margin-top: 17px;
 }
-
+.menu-list {
+  list-style: none;
+  text-decoration: none;
+}
 .navbar-menu li {
   margin-right: 20px;
 }
@@ -24,7 +28,8 @@
   margin-right: 0;
 }
 
-.navbar-menu li a {
+.navbar-menu li a,
+.menu-list {
   text-decoration: none;
   color: black;
   font-size: 16px;

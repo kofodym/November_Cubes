@@ -123,30 +123,109 @@
 
 // export default LoginPopup;
 
-import React from 'react';
+//2
+// import React from 'react';
+// import './LoginPopup.css';
+// import { useState } from 'react';
+// import Cancel from '../../assets/cancel.svg';
+
+// const LoginPopup = ({ setShowLogin }) => {
+//   const [currState, setCurrState] = useState('Login');
+
+//   return (
+//     <div className="login-popup">
+//       <form className="login-popup-container">
+//         <div className="login-popup-title">
+//           <h2>{currState}</h2>
+//           <img onClick={() => setShowLogin(false)} src={Cancel} alt="" />
+//         </div>
+//         <div className="login-popup-inputs">
+//           {currState === 'Login' ? (
+//             <></>
+//           ) : (
+//             <input type="text" placeholder="Your name" required />
+//           )}
+
+//           <input type="email" placeholder="user@gmail.com" required />
+//           <input type="password" placeholder="password" required />
+//         </div>
+//         <button className="login-popup-btn">
+//           {currState === 'Sign Up' ? 'Create account' : 'Login'}
+//         </button>
+//         <div className="login-popup-condition">
+//           <input type="checkbox" required />
+//           <p>By continuing, I agree to the terms of use & privacy policy.</p>
+//         </div>
+
+//         {currState === 'Login' ? (
+//           <p>
+//             Create a new account?{' '}
+//             <span onClick={() => setCurrState('Sign Up')}>Click here</span>
+//           </p>
+//         ) : (
+//           <p>
+//             Already have an account?
+//             <span onClick={() => setCurrState('Login')}>Login here</span>
+//           </p>
+//         )}
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default LoginPopup;
+
+//3
+import React, { useState } from 'react';
 import './LoginPopup.css';
-import { useState } from 'react';
 import Cancel from '../../assets/cancel.svg';
 
-const LoginPopup = ({ setShowLogin }) => {
+const LoginPopup = ({ setShowLogin, onLoginSuccess }) => {
   const [currState, setCurrState] = useState('Login');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    // Add your login/signup logic here
+    // Mock successful login/signup for demonstration
+    const user = { email, name: currState === 'Sign Up' ? name : 'User' }; // mock user object
+    onLoginSuccess(user);
+    setShowLogin(false);
+  };
 
   return (
     <div className="login-popup">
-      <form className="login-popup-container">
+      <form className="login-popup-container" onSubmit={handleSubmit}>
         <div className="login-popup-title">
           <h2>{currState}</h2>
-          <img onClick={() => setShowLogin(false)} src={Cancel} alt="" />
+          <img onClick={() => setShowLogin(false)} src={Cancel} alt="Close" />
         </div>
         <div className="login-popup-inputs">
-          {currState === 'Login' ? (
-            <></>
-          ) : (
-            <input type="text" placeholder="Your name" required />
+          {currState === 'Sign Up' && (
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
           )}
-
-          <input type="email" placeholder="user@gmail.com" required />
-          <input type="password" placeholder="password" required />
+          <input
+            type="email"
+            placeholder="user@gmail.com"
+            required
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="password"
+            required
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
         </div>
         <button className="login-popup-btn">
           {currState === 'Sign Up' ? 'Create account' : 'Login'}
@@ -155,7 +234,6 @@ const LoginPopup = ({ setShowLogin }) => {
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
-
         {currState === 'Login' ? (
           <p>
             Create a new account?{' '}
@@ -163,7 +241,7 @@ const LoginPopup = ({ setShowLogin }) => {
           </p>
         ) : (
           <p>
-            Already have an account?
+            Already have an account?{' '}
             <span onClick={() => setCurrState('Login')}>Login here</span>
           </p>
         )}

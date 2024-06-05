@@ -197,14 +197,17 @@
 //   );
 // };
 // export default Navbar;
+
+//2
+// import { Link } from 'react-router-dom';
 // import Logo from '../../assets/Logo.svg';
 // import { useState, useContext } from 'react';
 // import './Navbar.css';
 // import React from 'react';
 // import { StoreContext } from '../StoreContext/StoreContext';
-// import UserIcon from '../../assets/user-solid.svg';
+
 // import BagIcon from '../../assets/bag-shopping-solid.svg';
-// import Logout from '../../assets/arrow-right-from-bracket-solid.svg';
+// import LogoutIcon from '../../assets/arrow-right-from-bracket-solid.svg'; // Import the logout icon
 // import { useNavigate } from 'react-router-dom';
 
 // const Navbar = ({ setShowLogin }) => {
@@ -247,6 +250,11 @@
 //         >
 //           <a href="/#">Home</a>
 //         </li>
+
+//         <li className="menu-list">
+//           <Link to="menu"> Menu </Link>{' '}
+//         </li>
+
 //         <li
 //           onClick={() => {
 //             setMenu('about-us');
@@ -274,7 +282,7 @@
 //         >
 //           <a href="/#footer">Contact Us</a>
 //         </li>
-//         {/* Conditionally render Signup/Logout button */}
+//         {/* Conditionally render Signup or Logout button */}
 //         {!token ? (
 //           <li>
 //             <button className="login" onClick={() => setShowLogin(true)}>
@@ -282,20 +290,21 @@
 //             </button>
 //           </li>
 //         ) : (
-//           <li className="navbar-profile">
-//             <img src={UserIcon} alt="User Icon" />
-//             <ul className="nav-profile-dropdown">
-//               <li>
-//                 <img src={BagIcon} alt="Bag Icon" />
-//                 <p>Orders</p>
-//               </li>
-//               <hr />
-//               <li onClick={logout}>
-//                 <img src={Logout} alt="Logout Icon" />
-//                 <p>Logout</p>
-//               </li>
-//             </ul>
-//           </li>
+//           <>
+//             <li className="navbar-profile">
+//               <ul className="nav-profile-dropdown">
+//                 <li>
+//                   <img src={BagIcon} alt="Bag Icon" />
+//                   <p>Orders</p>
+//                 </li>
+//               </ul>
+//             </li>
+//             <li>
+//               <button className="logout" onClick={logout}>
+//                 <img src={LogoutIcon} alt="Logout Icon" /> Logout
+//               </button>
+//             </li>
+//           </>
 //         )}
 //       </ul>
 //     </div>
@@ -304,17 +313,16 @@
 
 // export default Navbar;
 
+//3
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/Logo.svg';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import './Navbar.css';
 import React from 'react';
-import { StoreContext } from '../StoreContext/StoreContext';
-import UserIcon from '../../assets/user-solid.svg';
-import BagIcon from '../../assets/bag-shopping-solid.svg';
-import LogoutIcon from '../../assets/arrow-right-from-bracket-solid.svg'; // Import the logout icon
+
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin, user }) => {
   const [menu, setMenu] = useState('home');
   const [showMenu, setShowMenu] = useState(false);
 
@@ -322,13 +330,12 @@ const Navbar = ({ setShowLogin }) => {
     setShowMenu(!showMenu);
   };
 
-  const { token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
   const logout = () => {
     localStorage.removeItem('token');
-    setToken('');
     navigate('/');
+    window.location.reload();
   };
 
   return (
@@ -354,6 +361,11 @@ const Navbar = ({ setShowLogin }) => {
         >
           <a href="/#">Home</a>
         </li>
+
+        <li className="menu-list">
+          <Link to="/menu"> Menu </Link>
+        </li>
+
         <li
           onClick={() => {
             setMenu('about-us');
@@ -382,7 +394,7 @@ const Navbar = ({ setShowLogin }) => {
           <a href="/#footer">Contact Us</a>
         </li>
         {/* Conditionally render Signup or Logout button */}
-        {!token ? (
+        {!user ? (
           <li>
             <button className="login" onClick={() => setShowLogin(true)}>
               Sign Up
@@ -390,18 +402,9 @@ const Navbar = ({ setShowLogin }) => {
           </li>
         ) : (
           <>
-            <li className="navbar-profile">
-              <img src={UserIcon} alt="User Icon" />
-              <ul className="nav-profile-dropdown">
-                <li>
-                  <img src={BagIcon} alt="Bag Icon" />
-                  <p>Orders</p>
-                </li>
-              </ul>
-            </li>
             <li>
-              <button className="logout" onClick={logout}>
-                <img src={LogoutIcon} alt="Logout Icon" /> Logout
+              <button className="login" onClick={logout}>
+                Log-out
               </button>
             </li>
           </>
