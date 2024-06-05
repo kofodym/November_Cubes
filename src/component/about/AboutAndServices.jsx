@@ -10,17 +10,14 @@ export const AboutAndServices = () => {
         <div className="about-text">
           <h2>Your one-stop dining destination...</h2>
           <p className="about-description1">
-            Look no further than November Cubes a unique dining destination{' '}
-            <br />
+            Look no further than November Cubes a unique dining destination
             offering the best of both worlds under one roof!
           </p>
           <p className="about-description2">
             <strong>November Cubes</strong> tantalizes your taste buds with a
-            delectable <br />
-            selection of intercontinental dishes. From savory noodles and
-            sizzling
-            <br /> shawarma to fluffy jollof spaghetti and juicy chicken, embark
-            on a <br /> culinary adventure across continents.
+            delectable selection of intercontinental dishes. From savory noodles
+            and sizzling shawarma to fluffy jollof spaghetti and juicy chicken,
+            embark on a culinary adventure across continents.
           </p>
         </div>
         <div className="about-image">
@@ -35,15 +32,12 @@ export const AboutAndServices = () => {
           <h2>Our Services:</h2>
           <p className="service-description1">
             <strong>Catering:</strong> Planning an event? We bring the world to
-            you with our
-            <br />
-            outdoor catering options for all kind of events.
+            you with our outdoor catering options for all kind of events.
           </p>
           <p className="service-description2">
             <strong>Dine In or Take Out:</strong> Craving our intercontinental
-            dishes or
-            <br /> Mama Ashabis specialties? Enjoy them at our restaurant or
-            order <br /> for lightning-fast delivery!
+            dishes or Mama Ashabis specialties? Enjoy them at our restaurant or
+            order for lightning-fast delivery!
           </p>
         </div>
       </section>

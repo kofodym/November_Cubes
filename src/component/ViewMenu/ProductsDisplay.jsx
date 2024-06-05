@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import '../../pages/Menu.css'; // Import your CSS file for styling
 import { MenuData } from './MenuData'; // Import the menu data
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
-import { IoMdAddCircle } from 'react-icons/io';
+//import { IoMdAddCircle } from 'react-icons/io';
 
-const ProductDisplay = ({ addToCart }) => {
+const ProductDisplay = () => {
   // Receive addToCart as a prop
   // product data
   const products = MenuData;
