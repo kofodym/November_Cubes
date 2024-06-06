@@ -6,7 +6,12 @@
   margin: 50px auto;
   font-family: 'montserrat', sans-serif;
 }
-
+.about-text {
+  margin-right: 20px;
+}
+.service-image img {
+  margin-right: 50px;
+}
 .about-text h2,
 .service-text h2 {
   color: #c70000;
@@ -81,59 +86,40 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 800px) {
-  /* .about-section,
-  .service-section {
-    display: flex;
-    width: 90%;
-    flex-direction: column;
-    position: relative;
-    font-family: 'montserrat', sans-serif;
-  }
-  .about-image img {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    position: absolute;
+@media (max-width: 600px) {
+  .about-description1,
+  .about-description2,
+  .service-description1,
+  .service-description2 {
+    line-height: 25px;
+    word-spacing: 0.1px;
   }
   .about-text h2,
   .service-text h2 {
-    color: #c70000;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 2vw;
+    font-size: 3vw;
   }
-  .about-description1 {
-    font-size: 16px;
-    position: relative;
-    z-index: 2;.about-text h2,
-  .service-text h2 {
-    color: #c70000;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 2vw;
-  }
-  }
+}
+@media (max-width: 800px) {
   .about-description1,
   .about-description2,
   .service-description1,
   .service-description2 {
     line-height: 30px;
-    word-spacing: 10px;
-  } */
+    word-spacing: 0.2px;
+  }
   .about-section,
   .service-section {
-    flex-direction: column; /* Change to column layout on smaller screens */
+    flex-direction: column;
     align-items: center;
   }
 
   .about-image {
-    order: 2; /* Change order of image to appear below text on mobile */
-    margin-bottom: 20px; /* Optional: Add space between image and text */
+    order: 2;
+    margin-bottom: 20px;
   }
 
   .about-text {
-    order: 1; /* Change order of text to appear above image on mobile */
+    order: 1;
   }
   .about-text h2,
   .service-text h2 {
@@ -147,5 +133,21 @@
   .service-description1,
   .service-description2 {
     white-space: normal; /* Allow wrapping of text */
+  }
+}
+@media (max-width: 400px) {
+  .about-description1,
+  .about-description2,
+  .service-description1,
+  .service-description2 {
+    line-height: 20px;
+    word-spacing: 0;
+  }
+  .about-text h2,
+  .service-text h2 {
+    font-size: 4vw;
+  }
+  .about-image {
+    margin-bottom: 10px;
   }
 }

@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import SearchBar from "../component/SearchBar/SearchBar";
-import ProductDisplay from "../component/ViewMenu/ProductsDisplay";
-import ProductDetails from "../component/ViewMenu/ProductDetails";
-import Cart from "../component/ViewMenu/Cart";
+import React, { useState } from 'react';
+import SearchBar from '../component/SearchBar/SearchBar';
+import ProductDisplay from '../component/ViewMenu/ProductsDisplay';
+import ProductDetails from '../component/ViewMenu/ProductDetails';
+import Cart from '../component/ViewMenu/Cart';
 // import Categories from "../component/ViewMenu/Categories"
-import "../pages/Menu.css";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Routes, Route } from "react-router-dom";
+import '../pages/Menu.css';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Routes, Route } from 'react-router-dom';
 
 function Menu() {
   const [cartItems, setCartItems] = useState([]);
   const [showSideCart, setShowSideCart] = useState(false);
 
-  const addToCart = (product) => {
-    const existingProduct = cartItems.find((item) => item.id === product.id);
+  const addToCart = product => {
+    const existingProduct = cartItems.find(item => item.id === product.id);
     if (existingProduct) {
       setCartItems(
-        cartItems.map((item) =>
+        cartItems.map(item =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
@@ -29,16 +29,16 @@ function Menu() {
 
     setShowSideCart(true);
 
-    toast.success("Item added to cart", {
-      position: "top-center",
+    toast.success('Item added to cart', {
+      position: 'top-center',
       autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
-      toastClassName: "custom-toast",
+      theme: 'light',
+      toastClassName: 'custom-toast',
     });
   };
 
@@ -50,7 +50,7 @@ function Menu() {
     <div className="product">
       <SearchBar toggleSideCartVisibility={toggleSideCartVisibility} />
       <div className="product-container">
-       {/* <Categories /> */}
+        {/* <Categories /> */}
         <div className="d-flex">
           <Routes>
             <Route
@@ -62,7 +62,7 @@ function Menu() {
               element={<ProductDetails addToCart={addToCart} />}
             />
           </Routes>
-          
+
           <div className="side-cart d-flex flex-md-column align-items-center justify-content-evenly">
             {showSideCart && (
               <Cart cartItems={cartItems} setCartItems={setCartItems} />

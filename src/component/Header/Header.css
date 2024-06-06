@@ -18,13 +18,16 @@
 }
 
 .header-contents h2 {
-  font-weight: 500;
-  font-size: clamp(2rem, 5vw, 3.7rem);
+  font-weight: 600;
+  font-size: 70px;
+  font-family: 'inter';
   margin-bottom: 10px;
 }
 
 .header-contents p {
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'inter';
   margin-bottom: 20px;
 }
 

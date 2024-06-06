@@ -1,22 +1,65 @@
-import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import LandingPage from "../pages/LandingPage";
-import Navbar from "../component/Navbar/Navbar";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import Menu from "../pages/Menu";
-import LoginPopup from "../component/LoginPopup/LoginPopup";
-import Footer from "../component/Footer/Footer";
-import "./App.css";
-import Checkout from "../pages/Checkout.jsx";
+// import React, { useState } from 'react';
+// import { Routes, Route } from 'react-router-dom';
+// import LandingPage from '../pages/LandingPage';
+// import Navbar from '../component/Navbar/Navbar';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.min.js';
+// import Menu from '../pages/Menu';
+// import LoginPopup from '../component/LoginPopup/LoginPopup';
+// import Footer from '../component/Footer/Footer';
+// import './App.css';
+// import Checkout from '../pages/Checkout.jsx';
+
+// const App = () => {
+//   const [showLogin, setShowLogin] = useState(false);
+//   return (
+//     <>
+//       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+//       <div className="App">
+//         <Navbar setShowLogin={setShowLogin} />
+//         <Routes>
+//           <Route path="/" element={<LandingPage />} />
+//           <Route path="/menu/*" element={<Menu />} />
+//           <Route path="/checkout" element={<Checkout />} />
+//         </Routes>
+//         <Footer />
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from '../pages/LandingPage';
+import Navbar from '../component/Navbar/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import Menu from '../pages/Menu';
+import LoginPopup from '../component/LoginPopup/LoginPopup';
+import Footer from '../component/Footer/Footer';
+import './App.css';
+import Checkout from '../pages/Checkout.jsx';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
+  const [user, setUser] = useState(null); // State to manage authenticated user
+
+  const handleLoginSuccess = user => {
+    setUser(user);
+  };
+
   return (
     <>
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+      {showLogin && (
+        <LoginPopup
+          setShowLogin={setShowLogin}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      )}
       <div className="App">
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar setShowLogin={setShowLogin} user={user} />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/menu/*" element={<Menu />} />
