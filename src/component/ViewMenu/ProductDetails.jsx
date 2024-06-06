@@ -38,7 +38,7 @@ const ProductDetails = ({ product, addToCart, closeModal }) => {
                 {product.id}
               </h3>
             </div>
-            <button className="add-to-cart2" onClick={() => addToCart(product)}>
+            <button type="button" className="add-to-cart2" onClick={() => addToCart(product)}>
               Add to Cart
             </button>
           </div>

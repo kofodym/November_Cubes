@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../pages/Menu.css'; // Import your CSS file for styling
+import '../../pages/Menu.css';
 import { MenuData } from './MenuData'; // Import the menu data
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import ProductDetails from './ProductDetails';
@@ -31,7 +31,7 @@ const ProductDisplay = ({ addToCart }) => {
       </div>
 
       <div className="product-list">
-        {products.map(product => (
+        {products.map((product) => (
           <div
             key={product.id}
             className="product-item d-flex flex-column gap-3"
@@ -51,7 +51,7 @@ const ProductDisplay = ({ addToCart }) => {
 
                   <MdOutlineFavoriteBorder
                     className={`favourite-icon ${
-                      isFavourite ? 'favourite-icon-filled' : ''
+                      isFavourite ? "favourite-icon-filled" : ""
                     }`}
                     onClick={handleFavouriteClick}
                   />
@@ -83,8 +83,12 @@ const ProductDisplay = ({ addToCart }) => {
 
         {selectedProduct && (
           <div className="popup-overlay" onClick={closePopup}>
-            <div className="popup-content" onClick={e => e.stopPropagation()}>
-              <ProductDetails product={selectedProduct} addToCart={addToCart} />
+            <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+              <ProductDetails
+                product={selectedProduct}
+                addToCart={addToCart}
+                closeModal={closePopup}
+              />
             </div>
           </div>
         )}
