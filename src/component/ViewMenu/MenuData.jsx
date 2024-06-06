@@ -27,7 +27,7 @@ export const MenuData = [
     price: 3000,
     image: Mojito_Drinks_1,
     alt: "Mojito Drinks",
-    Category: "Drinks",
+    category: "Drinks",
     description:
       "Mojito Drinks Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -38,7 +38,7 @@ export const MenuData = [
     price: 2500,
     image: Peppersoup_Goatmeat_2,
     alt: "Peppersoup Goatmeat",
-    Category: "Food",
+    category: "Food",
     description:
       "Peppersoup Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -60,7 +60,7 @@ export const MenuData = [
     price: 3500,
     image: Macaroni_Chicken_4,
     alt: "Macaroni Chicken",
-    Category: "Food",
+    category: "Food",
     description:
       "Macaroni Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -71,7 +71,7 @@ export const MenuData = [
     price: 3000,
     image: Berakfast_Combo_PapAkara_5,
     alt: "Breakfast Combo Pap and Akara",
-    Category: "Food",
+    category: "Food",
     description:
       "Breakfast Combo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -82,7 +82,7 @@ export const MenuData = [
     price: 4500,
     image: Champman_6,
     alt: "Champman",
-    Category: "Drinks",
+    category: "Drinks",
     description:
       "Champman Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -93,7 +93,7 @@ export const MenuData = [
     price: 3000,
     image: Ewa_Agoyin_7,
     alt: "Ewa Agoyin",
-    Category: "Food",
+    category: "Food",
     description:
       "Ewa Agoyin Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -104,7 +104,7 @@ export const MenuData = [
     price: 3000,
     image: Lemonade_Slushie_8,
     alt: "LemonadeSlushie",
-    Category: "Drinks",
+    category: "Drinks",
     description:
       "Lemonade Slushie Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
@@ -116,7 +116,7 @@ export const MenuData = [
     price: 3000,
     image: Peppersoup_Eforiro_9,
     alt: "Peppersoup Eforiro",
-    Category: "Food",
+    category: "Food",
     description:
       "Peppersoup_Eforiro Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
   },
