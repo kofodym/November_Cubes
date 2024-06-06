@@ -15,7 +15,6 @@
 .navbar-menu {
   display: flex;
   align-items: center;
-  margin-top: 17px;
 }
 .menu-list {
   list-style: none;
