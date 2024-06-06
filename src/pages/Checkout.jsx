@@ -20,7 +20,7 @@ import SearchBar from '../component/SearchBar/SearchBar.jsx';
 const Checkout = () => {
   const handlePayNow = () => {
     // Implement payment logic here
-    window.alert('Your order is on the way!');
+    window.alert('Order successfull!');
   };
   return (
     <div>

@@ -81,7 +81,7 @@
   color: #c70000;
 }
 
-/*Responsiveness*/
+/* //Responsiveness  */
 @media (max-width: 1050px) {
   .logo {
     width: 140px;
@@ -137,9 +137,5 @@
 
   .navbar-menu.show {
     display: block;
-  }
-
-  .navbar-menu li {
-    margin-bottom: 10px;
   }
 }

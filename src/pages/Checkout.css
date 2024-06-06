@@ -22,7 +22,7 @@
 .delivery-method-form,
 .delivery-details,
 .payment-method-form {
-  border: 1px solid #B9B9B9;
+  border: 1px solid #b9b9b9;
   background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 1),
@@ -121,13 +121,13 @@
   margin-top: 30px;
 }
 .order {
-  border: 1px solid #B9B9B9;
+  border: 1px solid #b9b9b9;
   padding: 20px;
   height: 800px;
 }
 .order-group {
   display: flex;
-  border: 1px solid #B9B9B9;
+  border: 1px solid #b9b9b9;
   border-radius: 6px;
   align-items: flex-start;
   justify-content: space-between;
@@ -135,7 +135,7 @@
   margin-bottom: 12px;
 }
 .order-price {
-  color: #B9B9B9;
+  color: #8d0000;
   margin-top: -12px;
 }
 
@@ -151,7 +151,7 @@
   padding: 0px 6px;
   font-size: 10px;
   cursor: pointer;
-  background-color: #B9B9B9;
+  background-color: #93b57f;
   color: white;
   border: none;
   border-radius: 2px;
@@ -176,14 +176,14 @@
   justify-content: space-between;
 }
 .pending-payment {
-  border: 1px solid #B9B9B9;
+  border: 1px solid #b9b9b9;
   margin-top: 30px;
   border-radius: 8px;
   padding: 5px;
 }
 .payment-status {
-  color: #af7b13;
-  border: 1px solid #B9B9B9;
+  color: #8d0000;
+  border: 1px solid #8d0000;
   background-color: transparent;
   padding: 6px 14px;
 }
@@ -201,7 +201,7 @@
   font-weight: 700;
 }
 .order-payment1 {
-  border-top: 1px dotted #af7b13;
+  border-top: 1px dotted #8d0000;
 }
 
 @media (max-width: 800px) {

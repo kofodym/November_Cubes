@@ -1,3 +1,81 @@
+/* .header {
+  height: 45vw;
+  margin: 7px auto;
+  background: url('/public/background.svg') no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'montserrat', sans-serif;
+  position: relative;
+}
+
+.header-contents {
+  text-align: center;
+  color: white;
+  max-width: 80%;
+  padding: 20px;
+}
+
+.header-contents h2 {
+  font-weight: 600;
+  font-size: 70px;
+  font-family: 'inter';
+  margin-bottom: 10px;
+}
+
+.header-contents p {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'inter';
+  margin-bottom: 20px;
+}
+
+.menu {
+  text-align: center;
+  background-color: #c70000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+
+/* @media (max-width: 1200px) {
+  .header-contents {
+    max-width: 90%;
+  } /* .navbar-menu li {
+    margin-bottom: 10px;
+  } 
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 60vh;
+  }
+
+  .header-contents {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 70vh;
+  }
+
+  .header-contents h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .header-contents p {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+} */
+
 .header {
   height: 45vw;
   margin: 7px auto;
@@ -52,17 +130,30 @@
 
 @media (max-width: 900px) {
   .header {
-    height: 60vh;
+    height: 50vw;
   }
 
   .header-contents {
     max-width: 90%;
+    padding: 15px;
+  }
+
+  .header-contents h2 {
+    font-size: 50px;
+  }
+
+  .header-contents p {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 600px) {
   .header {
-    height: 70vh;
+    height: 60vh;
+  }
+
+  .header-contents {
+    padding: 10px;
   }
 
   .header-contents h2 {
@@ -71,5 +162,23 @@
 
   .header-contents p {
     font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    height: 70vh;
+  }
+
+  .header-contents {
+    padding: 8px;
+  }
+
+  .header-contents h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .header-contents p {
+    font-size: clamp(0.8rem, 5vw, 1rem);
   }
 }
