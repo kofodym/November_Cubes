@@ -4,6 +4,7 @@
 .search-bar {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
+  border-color: #4B4B4B;
 }
 
 .IoSearch {
@@ -28,7 +29,7 @@
   font-size: 1.7rem;
   /* background-color: #FCF3DF; */
   background: linear-gradient(to bottom, white, #fcf3df);
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .search-icons > .icon-cover:hover {

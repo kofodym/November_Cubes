@@ -1,103 +1,78 @@
 import React, { useState } from "react";
-import "../../pages/Menu.css"; // Import your CSS file for styling
-import { MenuData } from "./MenuData"; // Import the menu data
-import { MdOutlineFavoriteBorder } from "react-icons/md";
-import ProductDetails from "./ProductDetails";
-import Categories from "../../component/ViewMenu/Categories";
+import SearchBar from "../component/SearchBar/SearchBar";
+import ProductDisplay from "../component/ViewMenu/ProductsDisplay";
+import ProductDetails from "../component/ViewMenu/ProductDetails";
+import Cart from "../component/ViewMenu/Cart";
+// import Categories from "../component/ViewMenu/Categories"
+import "../pages/Menu.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Routes, Route } from "react-router-dom";
 
-const ProductDisplay = ({ addToCart }) => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+function Menu() {
+  const [cartItems, setCartItems] = useState([]);
+  const [showSideCart, setShowSideCart] = useState(false);
 
-  const products = MenuData;
+  const addToCart = (product) => {
+    const existingProduct = cartItems.find((item) => item.id === product.id);
+    if (existingProduct) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    }
 
-  const handleViewMore = (product) => {
-    setSelectedProduct(product);
+    setShowSideCart(true);
+
+    toast.success("Item added to cart", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      toastClassName: "custom-toast",
+    });
   };
 
-  const closePopup = () => {
-    setSelectedProduct(null);
-  };
-
-  //Handles the favourite icon when clicked
-  const [isFavourite, setIsFavourite] = useState(false);
-  const handleFavouriteClick = () => {
-    setIsFavourite(!isFavourite);
+  const toggleSideCartVisibility = () => {
+    setShowSideCart(!showSideCart);
   };
 
   return (
-    <section className="products flex-column d-flex">
-      <div className="categories">
-        <Categories />
-      </div>
+    <div className="product">
+      <SearchBar toggleSideCartVisibility={toggleSideCartVisibility} />
+      <div className="product-container">
+        {/* <Categories /> */}
+        <div className="d-flex">
+          <Routes>
+            <Route
+              path="/"
+              element={<ProductDisplay addToCart={addToCart} />}
+            />
+            <Route
+              path="/product/:productId"
+              element={<ProductDetails addToCart={addToCart} />}
+            />
+          </Routes>
 
-      <div className="product-list">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="product-item d-flex flex-column gap-3"
-          >
-            <div className="product-image">
-              <img src={product.image} alt={product.alt} className="image" />
-            </div>
-
-            <div className="product-desc">
-              <div className="product-title  align-items-start justify-content-between d-flex">
-                <h3 className="product-name">{product.name}</h3>
-                <div
-                  className="favourite-icon-wrapper"
-                  onClick={handleFavouriteClick}
-                >
-                  <MdOutlineFavoriteBorder
-                    className={`favourite-icon ${
-                      isFavourite ? "favourite-icon-filled" : ""
-                    }`}
-                    onClick={handleFavouriteClick}
-                  />
-                </div>
-              </div>
-              <p className="product-subtitle mt-0">{product.sub_title}</p>
-              <div className="product-bottom">
-                <h3 className="product-price">
-                  <span>&#8358;</span>&nbsp;{product.price}
-                </h3>
-                <button
-                  className="view-more"
-                  type="button"
-                  onClick={() => handleViewMore(product)}
-                >
-                  View More
-                </button>
-              </div>
-
-              <button
-                type="button"
-                className="add-to-cart"
-                onClick={() => addToCart(product)}
-              >
-                +
-              </button>
-            </div>
+          <div className="side-cart d-flex flex-md-column align-items-center justify-content-evenly">
+            {showSideCart && (
+              <Cart cartItems={cartItems} setCartItems={setCartItems} />
+            )}
           </div>
-        ))}
-
-        {selectedProduct && (
-          <div className="popup-overlay" onClick={closePopup}>
-            <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-              <ProductDetails
-                product={selectedProduct}
-                addToCart={addToCart}
-                closeModal={closePopup}
-              />
-            </div>
-          </div>
-        )}
-
-        <button className="d-flex align-items-center justify-content-center">
-          See more
-        </button>
+        </div>
       </div>
-    </section>
+      <ToastContainer toastClassName="custom-toast" />
+    </div>
   );
-};
+}
 
-export default ProductDisplay;
+export default Menu;

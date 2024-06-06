@@ -29,7 +29,7 @@ export const MenuData = [
     alt: "Mojito Drinks",
     category: "Drinks",
     description:
-      "Mojito Drinks Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
+      "The classic mojito is a refreshing summer favorite made with white rum, fresh mint leaves, lime juice (or wedges), sugar (simple syrup), and soda water for a little fizz.",
   },
   {
     id: 2,
@@ -39,8 +39,7 @@ export const MenuData = [
     image: Peppersoup_Goatmeat_2,
     alt: "Peppersoup Goatmeat",
     category: "Food",
-    description:
-      "Peppersoup Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
+    description: "Tender goat meat mixed in spicy palm oil paste and ugba.",
   },
   {
     id: 3,
@@ -50,8 +49,7 @@ export const MenuData = [
     image: Breakfast_Combo_Pancake_3,
     alt: "Breakfast",
     category: "Food",
-    description:
-      "Breakfast Combo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
+    description: " A perfect breakfast delight..",
   },
   {
     id: 4,
@@ -62,7 +60,7 @@ export const MenuData = [
     alt: "Macaroni Chicken",
     category: "Food",
     description:
-      "Macaroni Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
+      "Indulge in a symphony of savory flavors with every bite of our irresistible macaroni masterpiece.",
   },
   {
     id: 5,
@@ -72,8 +70,7 @@ export const MenuData = [
     image: Berakfast_Combo_PapAkara_5,
     alt: "Breakfast Combo Pap and Akara",
     category: "Food",
-    description:
-      "Breakfast Combo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
+    description: "This breakfast combo is a perfect breakfast delight...",
   },
   {
     id: 6,
@@ -95,7 +92,7 @@ export const MenuData = [
     alt: "Ewa Agoyin",
     category: "Food",
     description:
-      "Ewa Agoyin Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta enim, optio corrupti accusamus ipsam libero perspiciatis.",
+      "Our Ewa agoyin is unarguably one of the most popular breakfast in Nigeria. It can be served with bread , yam , cassava flakes or eaten a.",
   },
   {
     id: 8,

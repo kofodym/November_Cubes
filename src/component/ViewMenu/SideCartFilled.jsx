@@ -19,12 +19,11 @@ const SideCartFilled = ({
           <div className="cart-item-details">
             <div>
               <h3 className="product-name">{item.name}</h3>
-              {/* <br /> */}
               <h4 className="product-price">
-                <span>&#8358;</span>&nbsp;{item.price}
+                <span>&#8358;</span>&nbsp;
+                {(item.price * item.quantity).toFixed(2)}
               </h4>
             </div>
-
             <div className="cart-item-controls">
               <div className="d-flex">
                 <button
@@ -52,10 +51,8 @@ const SideCartFilled = ({
       ))}
       <div>
         <h4>Total</h4>
-        {totalPrice}
+        <span>&#8358;</span>&nbsp;{totalPrice.toFixed(2)}
       </div>
-
-      {/* link that redirects to checkout page */}
       <Link to="/checkout">
         {cartItems.length > 0 && (
           <button className="checkout-btn">Checkout</button>
